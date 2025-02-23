@@ -27,6 +27,7 @@
     - title: Honours Mathematics and Physics (Bachelors of Science)
       institution: McMaster University, Hamilton, Canada
       year: 2012 - 2017
+    
 - title: Experience
   type: time_table
   contents:
@@ -44,8 +45,44 @@
         - Flight path optimization software
         - Chiller plant optimization & modelling
     - title: Research Assistant
+      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
+      year: 1917-1933
+
+    - title: Professor of Theoretical Physics
       institution: Ayers Research Group, McMaster University, Hamilton, Canada
       year: 2015 
       description:
         - Implemented a semi-definite optimization algorithm for constraining a density matrix to represent a quantum system
 
+- title: Services
+  type: time_table
+  contents:
+    - title: Co-Organizer
+      event: 2024 Telluride Neuromorphic Cognition Engineering Workshop
+      year: 2024
+      description:
+        - Co-organizer and invited speaker of the Language and Thought topic area at the Telluride neuromorphic workshop
+    - title: Instructor
+      event: Nengo Summer School
+      year: 2023, 2024
+      description:
+        - Co-organizer and instructor at the summer school for the Nengo neural and cognitive modelling software
+    
+        
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    items:
+      - European Neural Network Society (ENNS)  Best Paper Award (2024)
+      - Barbara Hayes-Roth Award for Women in Math and Computer Science (2022)
+      - Go-Bell Scholarship (2019, 2020)
+      - Keith & Debbie Geddes Graduate Scholarship (2020)
+      - The Emanuel Williams Scholarship in Physics (2014)
+      
+
+
+- title: Other Interests
+  type: list
+  contents:
+    - <u>Hobbies:</u> painting, hiking, gaming
