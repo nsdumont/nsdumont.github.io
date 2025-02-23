@@ -44,39 +44,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "nav-people",
-          title: "people",
-          description: "members of the lab or group",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/people/";
-          },
-        },{id: "dropdown-publications",
-              title: "publications",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-projects",
-              title: "projects",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "news-i-will-defend-my-phd-dissertation-on-january-13-click-here-for-more-information-amp-lt-li-amp-gt",
+        },{id: "news-i-will-defend-my-phd-dissertation-on-january-13-click-here-for-more-information",
           title: 'I will defend my PhD dissertation on January 13. Click here for more...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-applications-are-open-for-the-2025-telluride-neuromorphic-cognition-engineering-workshop",
+          title: 'Applications are open for the 2025 Telluride Neuromorphic Cognition Engineering Workshop',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_1/";
