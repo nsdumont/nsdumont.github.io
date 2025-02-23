@@ -46,6 +46,6 @@ scholar_userid: 2hnh9gkAAAAJ # your Google Scholar ID
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
 custom_social: # can be any name here other than the ones already defined above
-  logo: https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png # can be png, svg, jpg
+  logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
   title: Lab profile
   url: https://compneuro.uwaterloo.ca/people/nicole-dumont.html
