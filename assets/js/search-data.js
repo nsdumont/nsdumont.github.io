@@ -37,13 +37,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
         },{id: "news-i-will-defend-my-phd-dissertation-on-january-13-click-here-for-more-information",
           title: 'I will defend my PhD dissertation on January 13. Click here for more...',
           description: "",
