@@ -31,5 +31,5 @@ I am pleased to announce that applications are now open for the Language and Tho
 
 **Submission Details:** Applicants should be at the level of graduate (PhD) students or above (i.e. postdoctoral fellows, faculty, research and engineering staff, and equivalent positions in industry and national laboratories). We encourage women and minority candidates to apply. 
 
-Click <a href="https://sites.google.com/view/telluride-2025/apply">here</a> for more details and <a href="https://academicjobsonline.org/ajo/jobs/29701">here</a> to apply.  Anyone interested in proposing or discussing specific projects should contact Steve Abreu (s.abreu@rug.nl) or Nicole Dumont (ns2dumon@uwaterloo.ca). 
+Click <a href="https://sites.google.com/view/telluride-2025/apply">here</a></li> for more details and <a href="https://academicjobsonline.org/ajo/jobs/29701">here</a></li> to apply.  Anyone interested in proposing or discussing specific projects should contact Steve Abreu (s.abreu@rug.nl) or Nicole Dumont (ns2dumon@uwaterloo.ca). 
 

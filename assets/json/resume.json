@@ -88,12 +88,12 @@
       "name": "Ayers Research Group, McMaster University",
       "position": "Research Assistant",
       "startDate": "2015-05-01",
-      "endDate": "2015-08-01",
+      "endDate": "2019-08-01",
       "summary": "Undergraduate summer research position",
       "hightlights": ["Implemented a semi-definite optimization algorithm for constraining a density matrix to represent a quantum system"]
     }
   ],
-  "volunteer": [
+  "voluneer": [
     {
       "organization": "2024 Telluride Neuromorphic Cognition Engineering Workshop",
       "location": "Telluride, CO, USA",
@@ -117,7 +117,7 @@
     {
       "name": "Exploiting Semantic Information in a Spiking Neural SLAM System",
       "publisher": "Frontiers in Neuroscience",
-      "releaseDate": "2023",
+      "releaseDate": "2024",
       "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1190515/full",
       "summary": "Spiking neural model of simultaneous localization and mapping (SLAM) using Spatial Semantic Pointers, a vector representation that supports symbolic operations and probabilistic encoding in neurons"
     },
