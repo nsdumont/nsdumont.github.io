@@ -1,12 +1,11 @@
 ---
 layout: post
-title: A long announcement with details
+title: Applications are open for the 2025 Telluride Neuromorphic Cognition Engineering Workshop
 date: 2025-02-22 16:11:00-0400
 inline: false
 related_posts: false
 ---
 
-Applications are open for the 2025 Telluride Neuromorphic Cognition Engineering Workshop. Anyone interested in the Language and Thought topic area may contact me regarding potential projects and are encouraged to apply.
 ---
 
 
