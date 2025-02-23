@@ -88,12 +88,12 @@
       "name": "Ayers Research Group, McMaster University",
       "position": "Research Assistant",
       "startDate": "2015-05-01",
-      "endDate": "2019-08-01",
+      "endDate": "2015-08-01",
       "summary": "Undergraduate summer research position",
       "hightlights": ["Implemented a semi-definite optimization algorithm for constraining a density matrix to represent a quantum system"]
     }
   ],
-  "voluneer": [
+  "voluteer": [
     {
       "organization": "2024 Telluride Neuromorphic Cognition Engineering Workshop",
       "location": "Telluride, CO, USA",
@@ -115,13 +115,6 @@
   ],
   "publications": [
     {
-      "name": "Exploiting Semantic Information in a Spiking Neural SLAM System",
-      "publisher": "Frontiers in Neuroscience",
-      "releaseDate": "2024",
-      "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1190515/full",
-      "summary": "Spiking neural model of simultaneous localization and mapping (SLAM) using Spatial Semantic Pointers, a vector representation that supports symbolic operations and probabilistic encoding in neurons"
-    },
-    {
       "name": "A Recurrent Dynamic Model for Efficient Bayesian Optimization",
       "publisher": "2024 Neuro Inspired Computational Elements Conference (NICE)",
       "releaseDate": "2024",
@@ -134,6 +127,13 @@
       "releaseDate": "2024",
       "url": "https://compneuro.uwaterloo.ca/files/furlong2024.VSA.sampling.ICANN.pdf",
       "summary": "Biologically-plausible Monte Carlo Markov Chain sampling in the space of Vector Symbolic Algebra (VSA) encodings"
+    },
+    {
+      "name": "Exploiting Semantic Information in a Spiking Neural SLAM System",
+      "publisher": "Frontiers in Neuroscience",
+      "releaseDate": "2023",
+      "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1190515/full",
+      "summary": "Spiking neural model of simultaneous localization and mapping (SLAM) using Spatial Semantic Pointers, a vector representation that supports symbolic operations and probabilistic encoding in neurons"
     },
     {
       "name": "Biologically-based computation: How neural details and dynamics are suited for implementing a variety of algorithms",
