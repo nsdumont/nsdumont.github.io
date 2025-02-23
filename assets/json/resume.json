@@ -73,7 +73,7 @@
       "startDate": "2022-12-01",
       "endDate": "2024-01-01",
       "summary": "Part time research position",
-      "hightlights": ["Developed software to integrate a Spatial Semantic Pointer-based SLAM algorithm within a MuJoCo simulation environment and benchmarked it on neuromorphic hardware (Intel’s Loihi 1 chip)"],
+      "hightlights": ["Developed software to integrate a Spatial Semantic Pointer-based SLAM algorithm within a MuJoCo simulation environment and benchmarked it on neuromorphic hardware (Intel’s Loihi 1 chip)"]
     },
     {
       "name": "Cayuga Research",
@@ -91,26 +91,6 @@
       "endDate": "2015-08-01",
       "summary": "Undergraduate summer research position",
       "hightlights": ["Implemented a semi-definite optimization algorithm for constraining a density matrix to represent a quantum system"]
-    }
-  ],
-  "voluteer": [
-    {
-      "organization": "2024 Telluride Neuromorphic Cognition Engineering Workshop",
-      "location": "Telluride, CO, USA",
-      "position": "Co-Organizer",
-      "url": "https://sites.google.com/view/telluride-2024/topic-areas-2024/lt24-language-and-thought",
-      "startDate": "2024-06-30",
-      "endDate": "2024-07-20",
-      "summary": "Co-organizer and invited speaker of the Language and Thought topic area at the Telluride neuromorphic workshop"
-    },
-    {
-      "organization": "Nengo Summer School",
-      "location": "Waterloo, Canada",
-      "position": "Instructor",
-      "url": "https://www.nengo.ai/summer-school/",
-      "startDate": "2023-06-01",
-      "endDate": "2023-06-20",
-      "summary": "Co-organizer and instructor at the 2023 and 2024 Nengo summer schools on neural and cognitive modelling "
     }
   ],
   "publications": [
@@ -183,6 +163,26 @@
       "releaseDate": "2021",
       "url": "https://escholarship.org/content/qt8720b88v/qt8720b88v_noSplash_59391bd58d91e168eedb30a6d176a456.pdf",
       "summary": "Model grid cells with Spatial Semantic Pointers"
+    }
+  ],
+  "voluteer": [
+    {
+      "organization": "2024 Telluride Neuromorphic Cognition Engineering Workshop",
+      "location": "Telluride, CO, USA",
+      "position": "Co-Organizer",
+      "url": "https://sites.google.com/view/telluride-2024/topic-areas-2024/lt24-language-and-thought",
+      "startDate": "2024-06-30",
+      "endDate": "2024-07-20",
+      "summary": "Co-organizer and invited speaker of the Language and Thought topic area at the Telluride neuromorphic workshop"
+    },
+    {
+      "organization": "Nengo Summer School",
+      "location": "Waterloo, Canada",
+      "position": "Instructor",
+      "url": "https://www.nengo.ai/summer-school/",
+      "startDate": "2023-06-01",
+      "endDate": "2023-06-20",
+      "summary": "Co-organizer and instructor at the 2023 and 2024 Nengo summer schools on neural and cognitive modelling "
     }
   ],
   "awards": [
