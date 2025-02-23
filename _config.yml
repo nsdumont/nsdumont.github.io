@@ -194,6 +194,7 @@ exclude:
   - _pages/blog.md #
   - _posts/ #
   - _projects/
+  - _projects/?_project.md #
   - _pages/profiles.md
   - _pages/projects.md
   - assets/jupyter/blog.ipynb #
