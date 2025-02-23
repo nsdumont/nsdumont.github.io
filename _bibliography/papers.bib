@@ -14,7 +14,11 @@
     abstract={Spatial cognition relies on an internal map-like representation of space provided by hippocampal place cells, which in turn are thought to rely on grid cells as a basis. Spatial Semantic Pointers (SSP) have been introduced as a way to represent continuous spaces and positions via the activity of a spiking neural network. In this work, we further develop SSP representation to replicate the firing patterns of grid cells. This adds biological realism to the SSP representation and links biological findings with a larger theoretical framework for representing concepts. Furthermore, replicating grid cell activity with SSPs results in greater accuracy when constructing place cells. Improved accuracy is a result of grid cells forming the optimal basis for decoding positions and place cell output. Our results have implications for modelling spatial cognition and more general cognitive representations over continuous variables.},
     pdf={http://compneuro.uwaterloo.ca/files/publications/dumont.2020.pdf},
     selected={true},
-    preview={grid_cell.png}
+    preview={grid_cell.png},
+    bibtex_show={true},
+    html={https://cognitivesciencesociety.org/cogsci20/papers/0562/index.html},
+    slides={https://www.youtube.com/watch?v=Ipa6o87FYvQ},
+    google_scholar_id={u5HHmVD_uO8C}
 }
 
 @article{coleman2021optimal,
@@ -25,7 +29,9 @@
   year={2021},
   publisher={Springer},
   preview={climate.png},
-  url={https://link.springer.com/article/10.1007/s10614-021-10179-6}
+  html={https://link.springer.com/article/10.1007/s10614-021-10179-6},
+    bibtex_show={true},
+    doi={10.1007/s10614-021-10179-6}
 }
 
 @article{voelker2021simulating,
@@ -39,7 +45,11 @@
   publisher={MIT Press One Rogers Street, Cambridge, MA},
   abstract={While neural networks are highly effective at learning task-relevant representations from data, they typically do not learn representations with the kind of symbolic structure that is hypothesized to support high-level cognitive processes, nor do they naturally model such structures within problem domains that are continuous in space and time. To fill these gaps, this work exploits a method for defining vector representations that bind discrete (symbol-like) entities to points in continuous topological spaces in order to simulate and predict the behavior of a range of dynamical systems. These vector representations are spatial semantic pointers (SSPs), and we demonstrate that they can (1) be used to model dynamical systems involving multiple objects represented in a symbol-like manner and (2) be integrated with deep neural networks to predict the future of physical trajectories. These results help unify what have traditionally appeared to be disparate approaches in machine learning.},
   pdf={https://compneuro.uwaterloo.ca/files/publications/voelker.2021a.pdf},
-    preview={neco.jpeg}
+    preview={neco.jpeg},
+    bibtex_show={true},
+    html={https://direct.mit.edu/neco/article/33/8/2033/102625/Simulating-and-Predicting-Dynamical-Systems-With},
+    doi={10.1162/neco_a_01410},
+    dimensions={true}
 }
 
 @conference{dumont2021, 
@@ -49,7 +59,8 @@
       year = {2021}, 
       address = {Online}, 
       month = {Feb.~23-26},
-      poster={Cosyne poster_ SLAM.pdf}
+      poster={Cosyne poster_ SLAM.pdf},
+    bibtex_show={true}
     } 
 
 @inproceedings{furlong2024recurrent,
@@ -61,7 +72,8 @@
   organization={IEEE},
   abstract={Bayesian optimization is an important black-box optimization method used in active learning. An implementation of the algorithm using vector embeddings from Vector Symbolic Architectures was proposed as an efficient, neuromorphic ap- proach to solving these implementation problems. However, a clear path to neural implementation has not been explicated. In this paper, we explore an implementation of this algorithm expressed as recurrent dynamics that can be easily translated to neural populations, and present an implementation within the Lava programming framework for Intel’s neuromorphic computers. We compare the performance of the algorithm using different resolution representations of real-valued data, and demonstrate that the ability to find optima is preserved. This work provides a path forward to the implementation of Bayesian optimization on low-power neuromorphic computers, permitting the deployment of active learning techniques in low-power, edge computing applications.},
   pdf={https://neurocog.uwaterloo.ca/papers/Furlong_NICE2024.pdf},
-    preview={nice.png}
+    preview={nice.png},
+    bibtex_show={true}
 }
 
 @inproceedings{furlong2024biologically,
@@ -73,7 +85,9 @@
   organization={Springer},
   pdf={https://compneuro.uwaterloo.ca/files/furlong2024.VSA.sampling.ICANN.pdf},
   abstract={Vector symbolic algebras (VSAs) are modelling frameworks that unify human cognition and neural network models, and some have recently been shown to be probabilistic models akin to Kernel Mean Em- beddings. Sampling from vector-embedded distributions is an important tool for turning distributions into decisions, in the context of cognitive modelling, or actions, in the context of reinforcement learning. However, current techniques for sampling from these distribution embeddings rely on knowledge of the kernel embedding or its gradient, knowledge which is problematic for neural systems to access. In this paper, we explore biologically-plausible Hamiltonian Monte Carlo Markov Chain sampling in the space of VSA encodings, without relying on any explicit knowledge of the encoding scheme. Specifically, we encode data using a Holographic Reduced Representation (HRR) VSA, sample from the encoded distributions using Langevin dynamics in the VSA vector space, and demonstrate competitive sampling performance in a spiking-neural network implementation. Surprisingly, while the Langevin dynamics are not constrained to the manifold defined by the HRR encoding, the generated samples contain sufficient information to reconstruct the target distribution, given an appropriate decoding scheme. We also demonstrate that the HRR algebra provides a straightforward conditioning operation. These results show that a generalized sampling model can explain how brains turn probabilistic latent representations into concrete actions in an encoding scheme-agnostic fashion. Moreover, sampling from vector embeddings of distributions permits the implementation of probabilistic algorithms, capturing uncertainty in cognitive models. We also note that the ease of conditioning distributions is particularly well-suited to reinforcement learning applications.},
-    preview={sampling.png}
+    preview={sampling.png},
+    bibtex_show={true},
+    html={https://link.springer.com/chapter/10.1007/978-3-031-72341-4_7}
 }
 
 
@@ -91,7 +105,8 @@ A comparison of the discrete-time TD(n) and continuous TD($\theta$) rules on a s
 pdf={https://cs.uwaterloo.ca/~jorchard/academic/Bartlett_ICCM2022.pdf},
 code={https://github.com/maddybartlett/ImprovedRLContinuousStateReps},
 annotation={* Authors contributed equally},
-    preview={ldn_rl.png}
+    preview={ldn_rl.png},
+    bibtex_show={true}
     } 
 
 @conference{bartlett2023improving,
@@ -105,7 +120,9 @@ year = {2023},
       pdf={https://compneuro.uwaterloo.ca/files/ICCM_Bartlett2023.pdf},
       code={https://github.com/maddybartlett/Bio_Plausible_Memory_Continuous_Time_RL},
 annotation={* Authors contributed equally},
-preview={rl_ssps.png}
+preview={rl_ssps.png},
+    bibtex_show={true},
+    html={https://mathpsych.org/session/298}
 }
 
 
@@ -120,7 +137,11 @@ preview={rl_ssps.png}
   pdf={http://compneuro.uwaterloo.ca/files/publications/dumont2023slam.pdf},
   code={https://github.com/nsdumont/Semantic-Spiking-Neural-SLAM-2023/tree/original},
   selected={true},
-    preview={ssp_slam_output.gif}
+    preview={ssp_slam_output.gif},
+    bibtex_show={true},
+    html={https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1190515/full},
+    doi={10.3389/fnins.2023.1190515},
+    dimensions={true}
 }
 
 
@@ -145,7 +166,9 @@ preview={rl_ssps.png}
     poster={CogSci2022_poster.pdf},
     code={https://github.com/nsdumont/neurosymPI},
     selected={true},
-    preview={ssp_pi.png}
+    preview={ssp_pi.png},
+    bibtex_show={true},
+    html={https://escholarship.org/uc/item/3pf7f9b4}
 }
 
 
@@ -162,7 +185,11 @@ preview={rl_ssps.png}
   pdf={http://compneuro.uwaterloo.ca/files/publications/dumont2023brainsci.pdf},
   code={https://github.com/ctn-waterloo/brain_sciences_biological_computation_2022},
   selected={true},
-    preview={timecells.png}
+    preview={timecells.png},
+    bibtex_show={true},
+    html={https://www.mdpi.com/2076-3425/13/2/245},
+    doi={10.3390/brainsci13020245},
+    dimensions={true}
 }
 
 
