@@ -13,6 +13,8 @@
     address={Toronto, Canada},
     abstract={Spatial cognition relies on an internal map-like representation of space provided by hippocampal place cells, which in turn are thought to rely on grid cells as a basis. Spatial Semantic Pointers (SSP) have been introduced as a way to represent continuous spaces and positions via the activity of a spiking neural network. In this work, we further develop SSP representation to replicate the firing patterns of grid cells. This adds biological realism to the SSP representation and links biological findings with a larger theoretical framework for representing concepts. Furthermore, replicating grid cell activity with SSPs results in greater accuracy when constructing place cells. Improved accuracy is a result of grid cells forming the optimal basis for decoding positions and place cell output. Our results have implications for modelling spatial cognition and more general cognitive representations over continuous variables.},
     pdf={http://compneuro.uwaterloo.ca/files/publications/dumont.2020.pdf},
+    selected={true},
+    preview={grid_cell.png}
 }
 
 @article{coleman2021optimal,
@@ -34,7 +36,8 @@
   year={2021},
   publisher={MIT Press One Rogers Street, Cambridge, MA},
   abstract={While neural networks are highly effective at learning task-relevant representations from data, they typically do not learn representations with the kind of symbolic structure that is hypothesized to support high-level cognitive processes, nor do they naturally model such structures within problem domains that are continuous in space and time. To fill these gaps, this work exploits a method for defining vector representations that bind discrete (symbol-like) entities to points in continuous topological spaces in order to simulate and predict the behavior of a range of dynamical systems. These vector representations are spatial semantic pointers (SSPs), and we demonstrate that they can (1) be used to model dynamical systems involving multiple objects represented in a symbol-like manner and (2) be integrated with deep neural networks to predict the future of physical trajectories. These results help unify what have traditionally appeared to be disparate approaches in machine learning.},
-  pdf={https://compneuro.uwaterloo.ca/files/publications/voelker.2021a.pdf}
+  pdf={https://compneuro.uwaterloo.ca/files/publications/voelker.2021a.pdf},
+    preview={neco.jpeg}
 }
 
 @conference{dumont2021, 
@@ -55,7 +58,8 @@
   year={2024},
   organization={IEEE},
   abstract={Bayesian optimization is an important black-box optimization method used in active learning. An implementation of the algorithm using vector embeddings from Vector Symbolic Architectures was proposed as an efficient, neuromorphic ap- proach to solving these implementation problems. However, a clear path to neural implementation has not been explicated. In this paper, we explore an implementation of this algorithm expressed as recurrent dynamics that can be easily translated to neural populations, and present an implementation within the Lava programming framework for Intel’s neuromorphic computers. We compare the performance of the algorithm using different resolution representations of real-valued data, and demonstrate that the ability to find optima is preserved. This work provides a path forward to the implementation of Bayesian optimization on low-power neuromorphic computers, permitting the deployment of active learning techniques in low-power, edge computing applications.},
-  pdf={https://neurocog.uwaterloo.ca/papers/Furlong_NICE2024.pdf}
+  pdf={https://neurocog.uwaterloo.ca/papers/Furlong_NICE2024.pdf},
+    preview={nice.png}
 }
 
 @inproceedings{furlong2024biologically,
@@ -66,7 +70,8 @@
   year={2024},
   organization={Springer},
   pdf={https://compneuro.uwaterloo.ca/files/furlong2024.VSA.sampling.ICANN.pdf},
-  abstract={Vector symbolic algebras (VSAs) are modelling frameworks that unify human cognition and neural network models, and some have recently been shown to be probabilistic models akin to Kernel Mean Em- beddings. Sampling from vector-embedded distributions is an important tool for turning distributions into decisions, in the context of cognitive modelling, or actions, in the context of reinforcement learning. However, current techniques for sampling from these distribution embeddings rely on knowledge of the kernel embedding or its gradient, knowledge which is problematic for neural systems to access. In this paper, we explore biologically-plausible Hamiltonian Monte Carlo Markov Chain sampling in the space of VSA encodings, without relying on any explicit knowledge of the encoding scheme. Specifically, we encode data using a Holographic Reduced Representation (HRR) VSA, sample from the encoded distributions using Langevin dynamics in the VSA vector space, and demonstrate competitive sampling performance in a spiking-neural network implementation. Surprisingly, while the Langevin dynamics are not constrained to the manifold defined by the HRR encoding, the generated samples contain sufficient information to reconstruct the target distribution, given an appropriate decoding scheme. We also demonstrate that the HRR algebra provides a straightforward conditioning operation. These results show that a generalized sampling model can explain how brains turn probabilistic latent representations into concrete actions in an encoding scheme-agnostic fashion. Moreover, sampling from vector embeddings of distributions permits the implementation of probabilistic algorithms, capturing uncertainty in cognitive models. We also note that the ease of conditioning distributions is particularly well-suited to reinforcement learning applications.}
+  abstract={Vector symbolic algebras (VSAs) are modelling frameworks that unify human cognition and neural network models, and some have recently been shown to be probabilistic models akin to Kernel Mean Em- beddings. Sampling from vector-embedded distributions is an important tool for turning distributions into decisions, in the context of cognitive modelling, or actions, in the context of reinforcement learning. However, current techniques for sampling from these distribution embeddings rely on knowledge of the kernel embedding or its gradient, knowledge which is problematic for neural systems to access. In this paper, we explore biologically-plausible Hamiltonian Monte Carlo Markov Chain sampling in the space of VSA encodings, without relying on any explicit knowledge of the encoding scheme. Specifically, we encode data using a Holographic Reduced Representation (HRR) VSA, sample from the encoded distributions using Langevin dynamics in the VSA vector space, and demonstrate competitive sampling performance in a spiking-neural network implementation. Surprisingly, while the Langevin dynamics are not constrained to the manifold defined by the HRR encoding, the generated samples contain sufficient information to reconstruct the target distribution, given an appropriate decoding scheme. We also demonstrate that the HRR algebra provides a straightforward conditioning operation. These results show that a generalized sampling model can explain how brains turn probabilistic latent representations into concrete actions in an encoding scheme-agnostic fashion. Moreover, sampling from vector embeddings of distributions permits the implementation of probabilistic algorithms, capturing uncertainty in cognitive models. We also note that the ease of conditioning distributions is particularly well-suited to reinforcement learning applications.},
+    preview={sampling.png}
 }
 
 
@@ -82,7 +87,9 @@ An ongoing challenge to providing biologically realistic models of learning is t
 This approach relies on the use of Legendre Delay Networks for storing information about the past that will be used to update the value function. 
 A comparison of the discrete-time TD(n) and continuous TD($\theta$) rules on a simple spatial navigation RL task in a largely non-spiking network is presented, and the theoretical implications and avenues for future work are discussed. },
 pdf={https://cs.uwaterloo.ca/~jorchard/academic/Bartlett_ICCM2022.pdf},
-code={https://github.com/maddybartlett/ImprovedRLContinuousStateReps}
+code={https://github.com/maddybartlett/ImprovedRLContinuousStateReps},
+annotation={* Authors contributed equally},
+    preview={ldn_rl.png}
     } 
 
 @conference{bartlett2023improving,
@@ -94,7 +101,8 @@ year = {3},
       month = {June~19-23},
       abstract={Learning from experience, often formalized as Reinforcement Learning (RL), is a vital means for agents to develop successful behaviours in natural environments. However, while biological organisms are embedded in continuous spaces and continuous time, many artificial agents use RL algorithms that implicitly assume some form of discretization of the state space, which can lead to inefficient resource use and improper learning. In this paper we show that biologically motivated representations of continuous spaces form a valuable state representation for RL. We use models of grid and place cells in the Medial Entorhinal Cortex and hippocampus, respectively, to represent continuous states in a navigation task and in the CartPole control task. Specifically, we model the hexagonal grid structures found in the brain using Hexagonal Spatial Semantic Pointers, and combine this state representation with single-hidden-layer neural networks to learn action policies in an Actor-Critic framework. We demonstrate our approach provides significantly increased robustness to changes in environment parameters (travel velocity), and learns to stabilize the dynamics of the CartPole system with comparable mean performance to a deep neural network, while decreasing the terminal reward variance by more than 150x across trials. These findings at once point to the utility of leveraging biologically motivated representations for RL problems, and suggest a more general role for hexagonally-structured representations in cognition.},
       pdf={https://compneuro.uwaterloo.ca/files/ICCM_Bartlett2023.pdf},
-      code={https://github.com/maddybartlett/Bio_Plausible_Memory_Continuous_Time_RL}
+      code={https://github.com/maddybartlett/Bio_Plausible_Memory_Continuous_Time_RL},
+annotation={* Authors contributed equally}
 }
 
 
@@ -107,7 +115,9 @@ year = {3},
   publisher={Frontiers Media SA},  
   abstract={To navigate in new environments, an animal must be able to keep track of its position while simultaneously creating and updating an internal map of features in the environment, a problem formulated as simultaneous localization and mapping (SLAM) in the field of robotics. This requires integrating information from different domains, including self-motion cues, sensory, and semantic information. Several specialized neuron classes have been identified in the mammalian brain as being involved in solving SLAM. While biology has inspired a whole class of SLAM algorithms, the use of semantic information has not been explored in such work. We present a novel, biologically plausible SLAM model called SSP-SLAM—a spiking neural network designed using tools for large scale cognitive modeling. Our model uses a vector representation of continuous spatial maps, which can be encoded via spiking neural activity and bound with other features (continuous and discrete) to create compressed structures containing semantic information from multiple domains (e.g., spatial, temporal, visual, conceptual). We demonstrate that the dynamics of these representations can be implemented with a hybrid oscillatory-interference and continuous attractor network of head direction cells. The estimated self-position from this network is used to learn an associative memory between semantically encoded landmarks and their positions, i.e., an environment map, which is used for loop closure. Our experiments demonstrate that environment maps can be learned accurately and their use greatly improves self-position estimation. Furthermore, grid cells, place cells, and object vector cells are observed by this model. We also run our path integrator network on the NengoLoihi neuromorphic emulator to demonstrate feasibility for a full neuromorphic implementation for energy efficient SLAM.},
   pdf={http://compneuro.uwaterloo.ca/files/publications/dumont2023slam.pdf},
-  code={https://github.com/nsdumont/Semantic-Spiking-Neural-SLAM-2023/tree/original}
+  code={https://github.com/nsdumont/Semantic-Spiking-Neural-SLAM-2023/tree/original},
+  selected={true},
+    preview={ssp_slam_output.gif}
 }
 
 
@@ -130,7 +140,9 @@ year = {3},
     Specifically, we incorporate a simple model of working memory to remember environment maps with such symbol-like representations situated in 2D space.},
     pdf={https://escholarship.org/uc/item/3pf7f9b4},
     poster={CogSci2022_poster.pdf},
-    code={https://github.com/nsdumont/neurosymPI}
+    code={https://github.com/nsdumont/neurosymPI},
+    selected={true},
+    preview={ssp_pi.png}
 }
 
 
@@ -145,7 +157,9 @@ year = {3},
   publisher={MDPI},
   abstract={The Neural Engineering Framework (Eliasmith & Anderson, 2003) is a long-standing method for implementing high-level algorithms constrained by low-level neurobiological details. In recent years, this method has been expanded to incorporate more biological details and applied to new tasks. This paper brings together these ongoing research strands, presenting them in a common framework. We expand on the NEF’s core principles of (a) specifying the desired tuning curves of neurons in different parts of the model, (b) defining the computational relationships between the values represented by the neurons in different parts of the model, and (c) finding the synaptic connection weights that will cause those computations and tuning curves. In particular, we show how to extend this to include complex spatiotemporal tuning curves, and then apply this approach to produce functional computational models of grid cells, time cells, path integration, sparse representations, probabilistic representations, and symbolic representations in the brain.},
   pdf={http://compneuro.uwaterloo.ca/files/publications/dumont2023brainsci.pdf},
-  code={https://github.com/ctn-waterloo/brain_sciences_biological_computation_2022}
+  code={https://github.com/ctn-waterloo/brain_sciences_biological_computation_2022},
+  selected={true},
+    preview={timecells.png}
 }
 
 
