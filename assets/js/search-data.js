@@ -37,7 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "news-i-will-defend-my-phd-dissertation-on-january-13-click-here-for-more-information",
+        },{id: "news-i-won-the-best-new-neuromorph-award-at-the-2024-telluride-neuromorphic-cognition-engineering-workshop-along-with-mara-wolter-u-tubingen",
+          title: 'I won the Best “New Neuromorph” award at the 2024 Telluride Neuromorphic Cognition...',
+          description: "",
+          section: "News",},{id: "news-best-paper-award-at-icann",
+          title: 'Best paper award at ICANN!',
+          description: "",
+          section: "News",},{id: "news-i-will-defend-my-phd-dissertation-on-january-13-click-here-for-more-information",
           title: 'I will defend my PhD dissertation on January 13. Click here for more...',
           description: "",
           section: "News",},{id: "news-applications-are-open-for-the-2025-telluride-neuromorphic-cognition-engineering-workshop",
