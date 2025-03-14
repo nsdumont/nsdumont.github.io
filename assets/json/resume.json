@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Nicole Dumont",
-    "label": "PhD candiate",
+    "label": "Computational Neuroscientist | Researcher",
     "image": "",
     "email": "ns2dumon@uwaterloo.ca",
     "url": "https://nsdumont.github.io/",
-    "summary": "PhD candidate in computer science researching computational models of cognition, particularly in spatial navigation, cognitive mapping, and reinforcement learning, inspired by neuroscience.",
+    "summary": "PhD in Computer Science researching computational models of cognition, with a focus on spatial navigation, cognitive mapping, and reinforcement learning inspired by neuroscience. Seeking postdoctoral opportunities in computational neuroscience, AI, or cognitive science.",
     "location": {
       "city": "Waterloo",
       "countryCode": "Canada",
