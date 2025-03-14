@@ -20,8 +20,8 @@ announcements:
 ---
 
 
+Hello! I am a researcher in theoretical neuroscience.
+I recently completed my PhD in Computer Science at the [University of Waterloo](https://uwaterloo.ca). I was advised by Chris Eliasmith ([Computational Neuroscience Research Group](https://compneuro.uwaterloo.ca)) and Jeff Orchard ([Neurocognitive Computing Lab](https://neurocog.uwaterloo.ca)), whose labs are affiliated with the [Centre for Theoretical Neuroscience](http://ctn.uwaterloo.ca/). My thesis, [Symbols, Dynamics, and Maps: A Neurosymbolic Approach to Spatial Cognition](https://hdl.handle.net/10012/21501), was about modelling spatial cognition in the brain with neurosymbolic methods and spiking neural networks.
 
-I am a PhD candidate in computer science at the [University of Waterloo](https://uwaterloo.ca). I am advised by Chris Eliasmith ([Computational Neuroscience Research Group](https://compneuro.uwaterloo.ca)) and Jeff Orchard ([Neurocognitive Computing Lab](https://neurocog.uwaterloo.ca)), whose labs are affiliated with the [Centre for Theoretical Neuroscience](http://ctn.uwaterloo.ca/). The focus of my thesis is modelling spatial cognition in the brain with neurosymbolic methods.
-
-I obtained a M.Math in the computational mathematics program at the University of Waterloo, where I researched continuous optimization and was advised by [Thomas Coleman](https://uwaterloo.ca/combinatorics-and-optimization/contacts/thomas-f-coleman). I obtained my B.Sc. in mathematics and physics from [McMaster University](https://www.mcmaster.ca). 
+I obtained a M.Math in the computational mathematics program at the University of Waterloo, where I researched continuous optimization and was advised by [Thomas Coleman](https://uwaterloo.ca/combinatorics-and-optimization/contacts/thomas-f-coleman). I obtained my B.Sc. in Mathematics and Physics from [McMaster University](https://www.mcmaster.ca). 
 
