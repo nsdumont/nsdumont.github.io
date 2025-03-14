@@ -5,7 +5,7 @@
     "image": "",
     "email": "ns2dumon@uwaterloo.ca",
     "url": "https://nsdumont.github.io/",
-    "summary": "PhD in Computer Science researching computational models of cognition, with a focus on spatial navigation, cognitive mapping, and reinforcement learning inspired by neuroscience. Seeking postdoctoral opportunities in computational neuroscience, AI, or cognitive science.",
+    "summary": "PhD in Computer Science researching computational models of cognition, with a focus on spatial navigation, cognitive mapping, and reinforcement learning inspired by neuroscience. ",
     "location": {
       "city": "Waterloo",
       "countryCode": "Canada",
@@ -40,7 +40,7 @@
       "area": "Research in computational neuroscience (specifically, spatial cognition and reinforcement learning) under the supervision of Chris Eliasmith and Jeff Orchard.",
       "studyType": "Computer Science (PhD)",
       "startDate": "2019-09-01",
-      "endDate": "2025-04-01",
+      "endDate": "2025-03-01",
       "courses": ["Neuro-symbolic methods for spatial representation, updating, and mapping",
   "Biologically plausible reinforcement learning (RL) and action selection"]
     },
