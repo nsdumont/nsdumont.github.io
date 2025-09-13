@@ -37,6 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
+        },{id: "nav-talks",
+          title: "talks",
+          description: "Recorded talks and lectures",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/videos/";
+          },
         },{id: "news-i-won-the-best-new-neuromorph-award-at-the-2024-telluride-neuromorphic-cognition-engineering-workshop-along-with-mara-wolter-u-tubingen",
           title: 'I won the Best “New Neuromorph” award at the 2024 Telluride Neuromorphic Cognition...',
           description: "",
