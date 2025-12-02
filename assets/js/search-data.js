@@ -48,20 +48,23 @@ ninja.data = [{
           title: 'I won the Best “New Neuromorph” award at the 2024 Telluride Neuromorphic Cognition...',
           description: "",
           section: "News",},{id: "news-best-paper-award-at-icann",
-          title: 'Best paper award at ICANN!',
+          title: 'Best paper award at ICANN',
           description: "",
           section: "News",},{id: "news-i-will-defend-my-phd-dissertation-on-january-13-click-here-for-more-information",
           title: 'I will defend my PhD dissertation on January 13. Click here for more...',
           description: "",
           section: "News",},{id: "news-i-successfully-defended-my-phd",
-          title: 'I successfully defended my PhD',
+          title: 'I successfully defended my PhD!',
           description: "",
           section: "News",},{id: "news-applications-are-open-for-the-2025-telluride-neuromorphic-cognition-engineering-workshop",
           title: 'Applications are open for the 2025 Telluride Neuromorphic Cognition Engineering Workshop',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_1/";
-            },},{
+            },},{id: "news-i-started-a-postdoc-at-the-institute-of-neuroinformatics-ini-in-zurich",
+          title: 'I started a postdoc at the Institute of Neuroinformatics (INI) in Zurich',
+          description: "",
+          section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
