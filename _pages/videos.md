@@ -11,7 +11,7 @@ nav_order: 6
 2025 Telluride Neuromorphic Cognition Engineering Workshop<br>
 July 2, 2025<br>
 <a href="https://youtu.be/R83_fWAUuWI?si=_tbT_lwy0im-iinL&t=3665">
-  <img src="https://nsdumont.github.io/assets/img/telluride2025_talk.png" 
+  <img src="{{ '/assets/img/telluride2025_talk.png' | relative_url }}" 
        alt="Youtube"
        width="480">
 </a>
@@ -20,7 +20,7 @@ July 2, 2025<br>
 VSAOnline<br>
 June 20, 2022<br>
 <a href="https://youtu.be/dvQpVQKzLRc?si=ZZO00Ckg_nRHxi3o">
-  <img src="https://nsdumont.github.io/assets/img/vsaonline_talk.png" 
+  <img src="{{ '/assets/img/vsaonline_talk.png' | relative_url }}" 
        alt="Youtube"
        width="480">
 </a>

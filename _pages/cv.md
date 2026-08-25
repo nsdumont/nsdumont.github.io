@@ -9,14 +9,14 @@ toc: false
 ---
 
 <p>
-  <a href="https://nsdumont.github.io/assets/pdf/CV.pdf" target="_blank" rel="noopener">
+  <a href="{{ '/assets/pdf/CV.pdf' | relative_url }}" target="_blank" rel="noopener">
     Download CV (PDF)
   </a>
 </p>
 
 <div style="width:100%; height:80vh;">
   <embed
-    src="https://nsdumont.github.io/assets/pdf/CV.pdf"
+    src="{{ '/assets/pdf/CV.pdf' | relative_url }}"
     type="application/pdf"
     width="100%"
     height="100%"
