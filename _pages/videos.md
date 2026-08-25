@@ -9,8 +9,7 @@ nav_order: 6
 
 **Introduction to Vector Symbolic Algebra (VSA)**<br>
 2025 Telluride Neuromorphic Cognition Engineering Workshop<br>
-July 2, 2025<bra>
-<img src="drawing.jpg" alt="Youtube" width="200"/>
+July 2, 2025<br>
 <a href="https://youtu.be/R83_fWAUuWI?si=_tbT_lwy0im-iinL&t=3665">
   <img src="https://nsdumont.github.io/assets/img/telluride2025_talk.png" 
        alt="Youtube"
