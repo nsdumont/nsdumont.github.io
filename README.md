@@ -23,15 +23,15 @@ purges unused CSS, and publishes the result to the `gh-pages` branch.
 
 ## Where things live
 
-| Path | Contents |
-| --- | --- |
-| `_pages/` | The site's pages: about (`/`), publications, cv, repositories, teaching, talks, news |
-| `_news/` | News / announcement items shown on the homepage |
-| `_bibliography/papers.bib` | Publication list; `selected={true}` marks papers for the homepage |
-| `_data/` | Coauthors, venues, socials, and the repositories listed on `/repositories/` |
-| `assets/img/publication_preview/` | Thumbnails referenced by `preview={...}` in `papers.bib` |
-| `assets/pdf/` | CV, posters, and course outlines |
-| `_config.yml` | Site settings |
+| Path                              | Contents                                                                             |
+| --------------------------------- | ------------------------------------------------------------------------------------ |
+| `_pages/`                         | The site's pages: about (`/`), publications, cv, repositories, teaching, talks, news |
+| `_news/`                          | News / announcement items shown on the homepage                                      |
+| `_bibliography/papers.bib`        | Publication list; `selected={true}` marks papers for the homepage                    |
+| `_data/`                          | Coauthors, venues, socials, and the repositories listed on `/repositories/`          |
+| `assets/img/publication_preview/` | Thumbnails referenced by `preview={...}` in `papers.bib`                             |
+| `assets/pdf/`                     | CV, posters, and course outlines                                                     |
+| `_config.yml`                     | Site settings                                                                        |
 
 ## Adding a publication
 

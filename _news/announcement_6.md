@@ -5,5 +5,4 @@ inline: true
 related_posts: false
 ---
 
-
 I started a postdoc at the Institute of Neuroinformatics (INI) in Zurich

@@ -2,13 +2,13 @@
 layout: about
 title: about
 permalink: /
-subtitle: 
+subtitle:
 
 profile:
   align: right
   image: dumont.jpeg
   image_circular: false # crops the image to make it circular
-  more_info: 
+  more_info:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -19,8 +19,6 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 ---
 
-
 Hello! I am a postdoctoral researcher at the [Institute of Neuroinformatics](https://www.ini.uzh.ch/en.html) (INI, UZH & ETH Zürich). I am currently working on models of neural circuits underlying uncertainty in perception and learning with Prof. Katharina Wilmes ([Theory of Neural Circuits Group](https://www.ini.uzh.ch/en/research/groups/wilmes.html)). I previously completed my PhD in Computer Science at the [University of Waterloo](https://uwaterloo.ca). I was advised by Prof. Chris Eliasmith ([Computational Neuroscience Research Group](https://compneuro.uwaterloo.ca)) and Prof. Jeff Orchard ([Neurocognitive Computing Lab](https://neurocog.uwaterloo.ca)), whose labs are affiliated with the [Centre for Theoretical Neuroscience](http://ctn.uwaterloo.ca/). My thesis, [Symbols, Dynamics, and Maps: A Neurosymbolic Approach to Spatial Cognition](https://hdl.handle.net/10012/21501), was about modelling spatial cognition in the brain with neurosymbolic methods and spiking neural networks.
 
-I obtained a M.Math in the computational mathematics program at the University of Waterloo, where I researched continuous optimization and was advised by [Thomas Coleman](https://uwaterloo.ca/combinatorics-and-optimization/contacts/thomas-f-coleman). I obtained my B.Sc. in Mathematics and Physics from [McMaster University](https://www.mcmaster.ca). 
-
+I obtained a M.Math in the computational mathematics program at the University of Waterloo, where I researched continuous optimization and was advised by [Thomas Coleman](https://uwaterloo.ca/combinatorics-and-optimization/contacts/thomas-f-coleman). I obtained my B.Sc. in Mathematics and Physics from [McMaster University](https://www.mcmaster.ca).

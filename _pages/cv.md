@@ -4,7 +4,7 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 3
-description: 
+description:
 toc: false
 ---
 
@@ -22,4 +22,3 @@ toc: false
     height="100%"
   />
 </div>
-
