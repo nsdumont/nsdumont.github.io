@@ -1,17 +1,169 @@
 ---
 ---
 
+@article{furlong2025,
+  title={Compositional neurosymbolic representations enable efficient active exploration},
+  abstract={Autonomous systems that learn and explore over long horizons face a problem. Standard methods scale
+  poorly in the number of observations, n, precluding sustained operation on bounded hardware. We show that
+  compositional, high-dimensional vector representations inspired by neural computation address these
+  constraints. We use these representations to construct a Bayesian optimization (BO) algorithm that operates in
+  complex spaces and reduces the time and memory requirements compared to state-of-the-art BO algorithms on
+  diverse tasks. Whereas standard methods incur O(n³) time and O(n²) memory
+  complexity, our approach holds both at O(d²) in the embedding dimension, which remains constant
+  over the algorithm's lifetime. Our algorithm reduces compute time by 60--200× without loss in accuracy.
+  Implementation on neuromorphic hardware reduces energy consumption per sample by 30--188×. These
+  efficiencies stem from converting sample selection into continuous optimization on a compact domain,
+  implementable by gradient methods or neural dynamics, enabling long-term, resource-bound, autonomous
+  exploration.},
+  author={Furlong*, P Michael and Nicole Sandra-Yaffa Dumont* and Antonova*, R. and Orchard, Jeff and Eliasmith, Chris},
+  journal={Nature Communications},
+  year={2026},
+  publisher={Nature Portfolio},
+  annotation={* Authors contributed equally},
+  code={https://github.com/ctn-waterloo/ssp-bayesopt},
+  selected={true},
+  preview={natcomm2026.png},
+  bibtex_show={true},
+  doi={10.1038/s41467-026-75703-4},
+  abbr={Nature Comms.}
+}
+
+
+@article{sainz2026neural,
+  title={Neural Representational Geometry of Feature Binding Operations},
+  abstract={The brain faces the feature binding problem: how are multiple stimulus features and variables
+  combined into coherent representations that support flexible behavior? A key finding from neuroscience is that
+  some brain regions employ factorized representations, where distinct features are encoded in neural state
+  space in such a way that enables independent readout and robust generalization. Various algebraic operations
+  have been proposed to model multi-variable representations, but despite extensive study of their theoretical
+  properties (e.g., capacity, noise robustness), it remains unclear which operations produce the
+  representational geometries observed in neural recordings. We systematically evaluate six binding operations
+  implemented in recurrent spiking neural networks performing a working memory task. We find that only
+  superposition and binding with slot-filler structure produce factorized geometry with favorable scaling, while
+  the alternatives do not. These results provide a taxonomy linking algebraic binding operations to neural
+  representational signatures, offering guidance for both computational modelers and experimentalists.},
+  author={Sainz Villalba, Laura and Furlong, P Michael and Bartlett, Madeleine and Nicole Sandra-Yaffa Dumont},
+  journal={bioRxiv},
+  year={2026},
+  publisher={Cold Spring Harbor Laboratory},
+  note={Preprint},
+  pdf={https://www.biorxiv.org/content/10.64898/2026.02.18.706604v1.full.pdf},
+  preview={Villalba2026.png},
+  bibtex_show={true},
+  html={https://www.biorxiv.org/content/10.64898/2026.02.18.706604v1},
+  doi={10.64898/2026.02.18.706604},
+  abbr={bioRxiv}
+}
+
+
+@inproceedings{simone2026,
+  title={Semantic map learning and externalization in an embodied neural agent: A comparison to human behavioral and neural data},
+  abstract={All mammals can build internal cognitive maps from sensory input, supporting spatial learning and
+  planning. While rodent studies have shown the mammalian navigation system solves the SLAM (Simultaneous
+  Localization and Mapping) problem, its role in human spatial memory and overt recall are less understood. To
+  investigate this, we adapted a spiking semantic SLAM algorithm for a "Treasure Hunt" task, where human
+  participants navigate a 3D beach in virtual reality and later point to remembered object locations. Our agent
+  integrates networks for bipedal locomotion, vision, memory, and arm control to enable first-person learning of
+  place-object associations, and externalizing that knowledge by pointing and expressing confidence. Comparing
+  model observables to human data, we replicate key behavioral and neural effects: monotonic scaling of accuracy
+  with confidence, and recall-dependence on local field potential power observed in the left hippocampus. This
+  work offers a mechanistic framework linking embodied navigation, memory, and communication in human spatial
+  cognition.},
+  author={Simone, Kathryn and Steffen, Lea Claudia and Nicole Sandra-Yaffa Dumont and Yu, Siyang and Ly, Hudson and Damberger, Graeme and Eliasmith, Chris},
+  booktitle={Proceedings of the Annual Meeting of the Cognitive Science Society},
+  volume={48},
+  number={48},
+  year={2026},
+  publisher={Cognitive Science Society},
+  pdf={https://escholarship.org/content/qt84x3v8n0/qt84x3v8n0.pdf},
+  preview={Simone2026.png},
+  bibtex_show={true},
+  html={https://escholarship.org/uc/item/84x3v8n0},
+  abbr={CogSci}
+}
+
+
+@conference{dumont2026,
+  author={Nicole Sandra-Yaffa Dumont and Katharina A. Wilmes},
+  title={Multi-sensory Integration in Predictive Processing},
+  abstract={Predictive processing is a leading account of perception, but its canonical form assumes a strict
+  sensory hierarchy in which predictions descend and errors ascend an ordered ladder of areas [2]. Cortical
+  connectivity is not strictly hierarchical, with dense lateral and recurrent projections and connections that
+  skip levels. Predictive processing can in principle operate over arbitrary network topologies [3], yet a basic
+  question remains open: when multiple populations project to a shared target, how are their converging signals
+  combined into predictions, errors, and uncertainties? This is especially relevant to multisensory integration,
+  and different answers imply different circuits and behaviour. We formalize two normative schemes for combining
+  converging projections. In the joint scheme, converging streams are fused into a single prediction with a
+  shared uncertainty (similar to [3]). In the separate scheme, each stream carries its own prediction and
+  uncertainty, and the target integrates parallel uncertainty-weighted errors. The schemes coincide in
+  restricted cases, but in general diverge in their dynamics, plasticity, and predicted activity. To derive
+  experimental predictions, we adopt the interpretation of prediction uncertainty as encoded by interneurons [5,
+  1], mapping our abstract model onto identifiable cell populations. We demonstrate the distinction on several
+  tasks and show how experiments could separate the schemes. In an audiovisual task tested under cross-modal
+  mismatch [4], both schemes produce cross-modal prediction errors, but the separate scheme predicts longer
+  error latencies and block-structured correlations among error neurons. In a cue integration task, both achieve
+  Bayes-optimal weighting via different mechanisms. Furthermore, under heteroscedastic noise, where each cue's
+  reliability varies with the latent variable, the schemes diverge more substantially: the separate scheme
+  learns each uncertainty as a function of the latent estimate and trades off the cues accordingly, while the
+  joint scheme, constrained to a single shared uncertainty, cannot. References: [1] Arno Granier et al.
+  "Confidence and second-order errors in cortical circuits". In: PNAS nexus 3.9 (2024), pgae404. [2] Rajesh PN
+  Rao and Dana H Ballard. "Predictive coding in the visual cortex: a functional interpretation of some extra-
+  classical receptive-field effects". In: Nature neuroscience 2.1 (1999), pp. 79-87. [3] Tommaso Salvatori et
+  al. "Learning on arbitrary graph topologies via predictive coding". In: Advances in neural information
+  processing systems 35 (2022), pp. 38232-38244. [4] Liesa Stange, Jos\'{e} P Ossand\'{o}n, and Brigitte
+  R\"{o}der. "Crossmodal visual predictions elicit spatially specific early visual cortex activity but later
+  than real visual stimuli". In: Philosophical Transactions of the Royal Society B: Biological Sciences 378.1886
+  (2023). [5] Katharina Anna Wilmes et al. "Uncertainty-modulated prediction errors in cortical microcircuits".
+  In: Elife 13 (2025), RP95127.},
+  booktitle={Bernstein Conference 2026},
+  year={2026},
+  month={Sep.~28-Oct.~1},
+  note={Accepted; poster presentation},
+  preview={bernstein2026.png},
+  bibtex_show={true},
+  abbr={Bernstein}
+}
+
+
 @phdthesis{dumont2025,
     title={Symbols, Dynamics, and Maps: A Neurosymbolic Approach to Spatial Cognition},
+    abstract={The discovery of various spatially sensitive neurons in the hippocampal formation, such as place,
+    grid, and boundary cells, has provided valuable insights into the neural mechanisms underlying spatial
+    representation and navigation. However, neural activity and connectivity data alone cannot fully reveal the
+    brain's algorithms. Bridging this gap requires computational models that not only explain the low-level
+    activity of spatially sensitive cells but also link it to higher-level symbolic representations manipulable
+    within a cognitive framework - models capable of binding spatial representations to discrete abstractions,
+    while also supporting hierarchical and probabilistic structures that enable reasoning and decision-making.
+    The Semantic Pointer Architecture (SPA; Eliasmith, 2013), in combination with the Neural Engineering
+    Framework (NEF; Eliasmith et al., 2003), provides a mathematical and computational framework to represent
+    symbols and implement dynamical systems in spiking neural networks. Spatial Semantic Pointers (SSPs; Komer
+    et al., 2019), an extension to the SPA, encode continuous variables, such as spatial locations, while
+    supporting the binding of spatial information with other features - continuous or discrete - into
+    compressed, multi-domain representations. This flexibility allows SSPs to model diverse cognitive processes,
+    ranging from spatial memory to abstract reasoning, offering a unified theory for how continuous variables
+    might be represented and manipulated in the brain. In this thesis, we leverage these tools to model key
+    components of spatial cognition, including path integration, cognitive map creation, and reinforcement
+    learning. Our contributions include the development of SSP-PI, a SSP-based path integration model that
+    combines velocity controlled oscillators with attractor dynamics to integrate continuous spatial variables.
+    We also introduce SSP-SLAM, a biologically inspired spiking neural SLAM system capable of constructing
+    semantic cognitive maps that bind and associate spatial and non spatial features. Furthermore, we propose
+    spiking RL models that demonstrate how SSP embeddings can effectively represent successor features, reward
+    distributions, and stochastic policies. Finally, we use the SPA and SSPs to construct state embeddings for
+    deep RL networks, demonstrating their utility in tasks requiring mixed semantic-spatial representations. Our
+    findings underscore the potential of SSPs to act as a unifying framework for understanding spatial
+    representation in the brain while advancing biologically inspired approaches to navigation and learning in
+    artificial systems. This work bridges theoretical neuroscience and artificial intelligence, laying the
+    groundwork for future explorations of shared principles across spatial and abstract cognition.},
     author={Nicole Sandra-Yaffa Dumont},
     type={PhD Thesis},
     school={University of Waterloo},
     address={Waterloo, ON},
     year={2025},
     publisher="UWSpace",
-    url={https://hdl.handle.net/10012/21501} ,
+    html={https://hdl.handle.net/10012/21501},
     abbr={PhD Thesis},
     preview={thesis.png},
+    bibtex_show={true},
   }
 
 
@@ -197,7 +349,7 @@ preview={rl_ssps.png},
 
 @article{dumont2023biologically,
   title={Biologically-Based Computation: How Neural Details and Dynamics Are Suited for Implementing a Variety of Algorithms},
-  author={Nicole Sandra-Yaffa Dumont and St{\"o}ckel, Andreas and Furlong, P Michael and Bartlett, Madeleine and Eliasmith, Chris and Stewart, Terrence C},
+  author={Nicole Sandra-Yaffa Dumont* and St{\"o}ckel*, Andreas and Furlong*, P Michael and Bartlett, Madeleine and Eliasmith, Chris and Stewart, Terrence C},
   journal={Brain Sciences},
   volume={13},
   number={2},
@@ -207,6 +359,7 @@ preview={rl_ssps.png},
   abstract={The Neural Engineering Framework (Eliasmith & Anderson, 2003) is a long-standing method for implementing high-level algorithms constrained by low-level neurobiological details. In recent years, this method has been expanded to incorporate more biological details and applied to new tasks. This paper brings together these ongoing research strands, presenting them in a common framework. We expand on the NEF’s core principles of (a) specifying the desired tuning curves of neurons in different parts of the model, (b) defining the computational relationships between the values represented by the neurons in different parts of the model, and (c) finding the synaptic connection weights that will cause those computations and tuning curves. In particular, we show how to extend this to include complex spatiotemporal tuning curves, and then apply this approach to produce functional computational models of grid cells, time cells, path integration, sparse representations, probabilistic representations, and symbolic representations in the brain.},
   pdf={http://compneuro.uwaterloo.ca/files/publications/dumont2023brainsci.pdf},
   code={https://github.com/ctn-waterloo/brain_sciences_biological_computation_2022},
+  annotation={* Authors contributed equally},
   selected={true},
     preview={timecells.png},
     bibtex_show={true},
