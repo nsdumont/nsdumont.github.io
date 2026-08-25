@@ -64,7 +64,12 @@ ninja.data = [{
             },},{id: "news-i-started-a-postdoc-at-the-institute-of-neuroinformatics-ini-in-zurich",
           title: 'I started a postdoc at the Institute of Neuroinformatics (INI) in Zurich',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "news-awarded-the-uzh-postdoc-grant",
+          title: 'Awarded the UZH Postdoc Grant',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_7/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
