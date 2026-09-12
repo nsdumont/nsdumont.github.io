@@ -64,12 +64,20 @@ ninja.data = [{
             },},{id: "news-i-started-a-postdoc-at-the-institute-of-neuroinformatics-ini-in-zurich",
           title: 'I started a postdoc at the Institute of Neuroinformatics (INI) in Zurich',
           description: "",
-          section: "News",},{id: "news-awarded-the-uzh-postdoc-grant",
+          section: "News",},{id: "news-2026-telluride-neuromorphic-ai-workshop",
+          title: '2026 Telluride Neuromorphic AI Workshop',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_8/";
+            },},{id: "news-awarded-the-uzh-postdoc-grant",
           title: 'Awarded the UZH Postdoc Grant',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_7/";
-            },},{
+            },},{id: "news-presentation-at-the-znz-annual-symposium",
+          title: 'Presentation at the ZNZ Annual Symposium',
+          description: "",
+          section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
@@ -105,11 +113,11 @@ ninja.data = [{
           window.open("https://scholar.google.com/citations?user=2hnh9gkAAAAJ", "_blank");
         },
       },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
+        id: 'social-work',
+        title: 'Work',
         section: 'Socials',
         handler: () => {
-          window.open("https://compneuro.uwaterloo.ca/people/nicole-dumont.html", "_blank");
+          window.open("https://tnc.ini.uzh.ch/people/nicole-sandra-yaffa-dumont.html", "_blank");
         },
       },{
       id: 'light-theme',
