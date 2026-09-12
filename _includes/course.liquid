@@ -2,12 +2,17 @@
 <li class="course-item">
   <div class="course-title">
     {{ course.title }}
-    {% if course.code %}<span class="course-code">{{ course.code }}</span>{% endif %}
+    {% if course.code -%}
+      <span class="course-code">{{ course.code }}</span>
+    {%- endif %}
   </div>
   <div class="course-meta">
-    {% if course.role %}<span class="course-role">{{ course.role }}</span>{% endif %}
+    {% if course.role -%}
+      <span class="course-role">{{ course.role }}</span>
+    {%- endif %}
     <span class="course-where">
-      {% if course.term %}{{ course.term }}, {% endif %}{{ course.institution }}
+      {% if course.term %}{{ course.term }}, {% endif -%}
+      {{- course.institution }}
     </span>
   </div>
   {% if course.links and course.links.size > 0 %}

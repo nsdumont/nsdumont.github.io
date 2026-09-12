@@ -8,6 +8,7 @@ nav_order: 6
 ---
 
 {% assign talks = site.data.talks | sort: 'date' | reverse %}
+
 <ul class="talks">
   {% for talk in talks %}
     {% include talk.liquid talk=talk %}

@@ -43,8 +43,10 @@
   function fibre(x, y, dx, dy, len, wobble, width) {
     const n = Math.max(2, Math.round(len / 10));
     const pts = [[x, y]];
-    let px = x, py = y;
-    const nx = -dy, ny = dx; // normal for sideways wobble
+    let px = x,
+      py = y;
+    const nx = -dy,
+      ny = dx; // normal for sideways wobble
     for (let i = 1; i <= n; i++) {
       const t = (len / n) * i;
       const w = R(-wobble, wobble);

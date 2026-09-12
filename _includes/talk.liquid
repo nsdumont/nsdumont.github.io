@@ -8,9 +8,15 @@
   {% endif %}
   <div class="talk-body">
     <a class="talk-title" href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>
-    {% if talk.venue %}<div class="talk-venue">{{ talk.venue }}</div>{% endif %}
-    {% if talk.date %}<div class="talk-date">{{ talk.date | date: '%B %-d, %Y' }}</div>{% endif %}
-    {% if talk.note %}<div class="talk-note">{{ talk.note }}</div>{% endif %}
+    {% if talk.venue %}
+      <div class="talk-venue">{{ talk.venue }}</div>
+    {% endif %}
+    {% if talk.date %}
+      <div class="talk-date">{{ talk.date | date: '%B %-d, %Y' }}</div>
+    {% endif %}
+    {% if talk.note %}
+      <div class="talk-note">{{ talk.note }}</div>
+    {% endif %}
     <a class="talk-link" href="{{ talk.url }}" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> Watch recording</a>
   </div>
 </li>
