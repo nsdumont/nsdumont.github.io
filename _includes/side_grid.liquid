@@ -1,0 +1,10 @@
+<div
+  class="side-art side-grid{% if site.side_art.grid.outline == false %} no-outline{% endif %}"
+  aria-hidden="true"
+  data-columns="{{ site.side_art.grid.columns | default: 5 }}"
+  data-cell-size="{{ site.side_art.grid.cell_size | default: 18 }}"
+  data-gap="{{ site.side_art.grid.gap | default: 5 }}"
+  data-fill-probability="{{ site.side_art.grid.fill_probability | default: 0.45 }}"
+  data-update-fraction="{{ site.side_art.grid.update_fraction | default: 0.08 }}"
+></div>
+<script src="{{ '/assets/js/side-grid.js' | relative_url | bust_file_cache }}"></script>

@@ -1,12 +1,52 @@
 github_users:
   - nsdumont
 
-repo_description_lines_max: 2
-
+# Each entry: repo (owner/name), description (GitHub "About" text), topics (GitHub topics).
+# Topics marked "added here" were not set on GitHub and can be edited freely.
 github_repos:
-  - nsdumont/Semantic-Spiking-Neural-SLAM-2023
-  - nsdumont/successor-features-A2C
-  - ctn-waterloo/Reinforcement-learning-in-continuous-time-with-Legendre-Memory-Units
-  - ctn-waterloo/ssp-bayesopt
-  - nsdumont/neurosymPI
-  - abr/neco-dynamics
+  - repo: nsdumont/omni-pcn
+    description: JAX predictive coding networks/graphs with learnable precision
+    topics: # added here
+      - predictive-coding
+      - jax
+      - uncertainty
+  - repo: ctn-waterloo/nengoplotlib
+    description: Plotting helpers for nengo. Includes spike raster plots, animations, neuron sorting code, and connectome plotting.
+    topics:
+      - nengo
+      - spiking-neural-networks
+      - visualization
+  - repo: nsdumont/Semantic-Spiking-Neural-SLAM-2023
+    description: Spiking Semantic SLAM (& path integration) with Spatial Semantic Pointers (SSPs) in Nengo and Nengo-Loihi
+    topics:
+      - cognitive-mapping
+      - grid-cells
+      - holographic-reduced-representations
+      - nengo
+      - oscillatory-interference
+      - path-integration
+      - semantic-slam
+      - slam
+      - spatial-semantic-pointers
+      - spiking-neural-networks
+      - vector-symbolic-architecture
+      - velocity-controlled-oscillators
+  - repo: nsdumont/successor-features-A2C
+    description: Successor features for RL in PyTorch, applied to MiniGrid tasks
+    topics: # added here
+      - reinforcement-learning
+      - successor-features
+      - pytorch
+  - repo: ctn-waterloo/Reinforcement-learning-in-continuous-time-with-Legendre-Memory-Units
+    description: Reinforcement learning in continuous time with Legendre Memory Units and the nengo package for modelling spiking neural networks
+    topics: # added here
+      - reinforcement-learning
+      - legendre-memory-units
+      - nengo
+      - spiking-neural-networks
+  - repo: ctn-waterloo/ssp-bayesopt
+    description: Efficient Bayesian Optimization with Spatial Semantic Pointers
+    topics: # added here
+      - bayesian-optimization
+      - spatial-semantic-pointers
+      - vector-symbolic-architecture

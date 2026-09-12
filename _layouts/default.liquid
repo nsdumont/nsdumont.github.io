@@ -16,7 +16,14 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %} {% if site.side_art.mode == "grid" or site.side_art.mode == "cortex" %}has-side-art{% endif %}">
+    <!-- Decorative side artwork (choose with side_art.mode in _config.yml) -->
+    {% if site.side_art.mode == 'grid' %}
+      {% include side_grid.liquid %}
+    {% elsif site.side_art.mode == 'cortex' %}
+      {% include side_cortex.liquid %}
+    {% endif %}
+
     <!-- Header -->
     {% include header.liquid %}
 

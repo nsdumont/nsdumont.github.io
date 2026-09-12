@@ -1,0 +1,9 @@
+<div
+  class="side-art side-cortex"
+  aria-hidden="true"
+  data-width="{{ site.side_art.cortex.width | default: 200 }}"
+  data-seed="{{ site.side_art.cortex.seed | default: 0 }}"
+  data-animate="{{ site.side_art.cortex.animate | default: true }}"
+  data-pulse-interval="{{ site.side_art.cortex.pulse_interval | default: 6 }}"
+></div>
+<script src="{{ '/assets/js/side-cortex.js' | relative_url | bust_file_cache }}"></script>

@@ -441,6 +441,46 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Social icons under the profile photo: one row spanning the photo's width
+.profile .social.profile-social {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+
+  .contact-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.4rem;
+
+    a {
+      display: inline-flex;
+      line-height: 1;
+
+      img {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-bottom: 0;
+      }
+
+      svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-bottom: 0;
+
+        image {
+          width: 1.4rem;
+          height: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .contact-note {
+    margin-top: 0.5rem;
+  }
+}
+
 .wechat-modal {
   display: none;
   position: fixed;
@@ -536,12 +576,243 @@ footer.sticky-bottom {
   transform: translateX(-15px) translateY(-5px);
 }
 
+// Side artwork (decorative, fixed along the left edge; see side_art in _config.yml)
+
+.side-art {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 0 1rem;
+  z-index: 0; // below the fixed navbar, which overlays it translucently
+  pointer-events: none;
+
+  svg {
+    display: block;
+    height: 100%;
+    overflow: visible;
+  }
+}
+
+// Mode "grid": random squares
+.side-grid {
+  rect {
+    fill: var(--global-bg-color);
+    stroke: var(--global-text-color);
+    stroke-width: 1.25;
+    transition: fill 0.35s ease;
+
+    &.sg-on {
+      fill: var(--global-text-color);
+    }
+  }
+
+  &.no-outline rect {
+    stroke: none;
+  }
+}
+
+// Mode "cortex": Cajal-style cortical column
+.side-cortex {
+  color: var(--global-text-color);
+  opacity: $side-cortex-opacity;
+
+  .neuron {
+    transition: opacity 3s ease;
+  }
+
+  .neuron.pulse {
+    opacity: 1 !important;
+    transition: opacity 0.9s ease;
+  }
+}
+
+@media (min-width: $side-art-min-width) {
+  .side-art {
+    display: block;
+  }
+
+  // Nudge the centered column (navbar, content, footer) right to balance the artwork.
+  body.has-side-art .container {
+    position: relative;
+    left: $side-art-content-offset;
+  }
+}
+
+// Talks
+
+ul.talks {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  .talk-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .talk-thumb {
+    position: relative;
+    flex: 0 0 220px;
+    max-width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: 0;
+
+    img {
+      width: 100%;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+
+    .talk-play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.6rem;
+      background: rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.03);
+    }
+
+    &:hover .talk-play {
+      opacity: 1;
+    }
+  }
+
+  .talk-body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .talk-title {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--global-theme-color);
+    margin-bottom: 0.25rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .talk-venue {
+    color: var(--global-text-color);
+  }
+
+  .talk-date {
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .talk-note {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .talk-link {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+
+    i {
+      margin-right: 0.25rem;
+    }
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  ul.talks .talk-item {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  ul.talks .talk-thumb {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
 // Repositories
 
-@media (min-width: 768px) {
-  .repo {
-    max-width: 50%;
+ul.repositories {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  .repo-item {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
+
+  .repo-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--global-theme-color);
+    overflow-wrap: anywhere;
+
+    i {
+      font-size: 1rem;
+      margin-right: 0.25rem;
+      color: var(--global-text-color-light);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .repo-description {
+    margin: 0.35rem 0 0.5rem;
+    color: var(--global-text-color);
+  }
+
+  .repo-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .repo-topic {
+    display: inline-block;
+    padding: 0.15rem 0.7rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #0969da;
+    background-color: #ddf4ff;
+    white-space: nowrap;
+  }
+}
+
+html[data-theme="dark"] ul.repositories .repo-topic {
+  color: #58a6ff;
+  background-color: rgba(56, 139, 253, 0.15);
 }
 
 // Blog

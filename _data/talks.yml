@@ -1,0 +1,13 @@
+# Recorded talks, newest first.
+# Each entry: title, venue, date (YYYY-MM-DD), url (recording), thumbnail (in assets/img/), optional note.
+- title: Introduction to Vector Symbolic Algebra (VSA)
+  venue: 2025 Telluride Neuromorphic Cognition Engineering Workshop
+  date: 2025-07-02
+  url: https://youtu.be/R83_fWAUuWI?si=_tbT_lwy0im-iinL&t=3665
+  thumbnail: telluride2025_talk.png
+
+- title: Bridging Neural and Symbolic Representation for Simultaneous Localization and Mapping
+  venue: VSAOnline
+  date: 2022-06-20
+  url: https://youtu.be/dvQpVQKzLRc?si=ZZO00Ckg_nRHxi3o
+  thumbnail: vsaonline_talk.png

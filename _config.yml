@@ -12,7 +12,6 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 keywords: theoretical-neuroscience, computational-neuroscience, reinforcement-learning # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: brain.svg # favicon: emoji, or an image name in /assets/img/
@@ -48,13 +47,33 @@ rss_icon: true
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 bib_search: true
 
 # Dimensions
 max_width: 930px
+
+# Decorative artwork fixed along the left edge of the viewport.
+# mode: "grid" (random squares), "cortex" (Cajal-style cortical column drawing), or "none" to turn it off.
+side_art:
+  mode: cortex
+  min_viewport_width: 1360 # hide the artwork on narrower screens so it never overlaps content
+  content_offset: 40 # px to shift the centered content column right, to balance the artwork
+  grid:
+    columns: 5 # number of squares across
+    cell_size: 32 # square size in px
+    gap: 8 # spacing between squares in px
+    outline: false # draw a black outline around each square
+    fill_probability: 0.45 # chance a square starts filled
+    update_fraction: 0.08 # fraction of squares re-randomized per scroll step
+  cortex:
+    width: 200 # drawing width in px
+    seed: 7 # 0 = different drawing on every page load; any other number = same drawing every time
+    opacity: 0.75 # overall darkness of the ink (0-1)
+    animate: true # occasionally let a single neuron darken briefly, then fade back
+    pulse_interval: 6 # seconds between idle pulses
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -345,7 +364,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto:wght@300;400;500;700&family=Material+Icons&display=swap"
   highlightjs:
     integrity:
       css:

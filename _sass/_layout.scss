@@ -6,6 +6,7 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
 
   h1,
   h2,
@@ -23,8 +24,19 @@ body.fixed-top-nav {
 }
 
 body.sticky-bottom-footer {
-  // Remove padding below footer.
+  // Remove padding below footer and keep the footer at the bottom of short pages.
   padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > .container[role="main"] {
+    flex: 1 0 auto;
+  }
+
+  > footer {
+    flex-shrink: 0;
+  }
 }
 
 .container {

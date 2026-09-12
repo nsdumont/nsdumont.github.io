@@ -1,0 +1,16 @@
+{% assign talk = include.talk %}
+<li class="talk-item">
+  {% if talk.thumbnail %}
+    <a class="talk-thumb" href="{{ talk.url }}" target="_blank" rel="noopener" aria-label="Watch: {{ talk.title }}">
+      <img src="{{ talk.thumbnail | prepend: '/assets/img/' | relative_url }}" alt="{{ talk.title }}">
+      <span class="talk-play"><i class="fa-solid fa-play"></i></span>
+    </a>
+  {% endif %}
+  <div class="talk-body">
+    <a class="talk-title" href="{{ talk.url }}" target="_blank" rel="noopener">{{ talk.title }}</a>
+    {% if talk.venue %}<div class="talk-venue">{{ talk.venue }}</div>{% endif %}
+    {% if talk.date %}<div class="talk-date">{{ talk.date | date: '%B %-d, %Y' }}</div>{% endif %}
+    {% if talk.note %}<div class="talk-note">{{ talk.note }}</div>{% endif %}
+    <a class="talk-link" href="{{ talk.url }}" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> Watch recording</a>
+  </div>
+</li>

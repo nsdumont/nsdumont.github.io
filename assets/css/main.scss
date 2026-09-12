@@ -5,6 +5,9 @@
 
 // Dimensions
 $max-content-width: {{ site.max_width }};
+$side-art-min-width: {{ site.side_art.min_viewport_width | default: 1200 }}px;
+$side-art-content-offset: {{ site.side_art.content_offset | default: 0 }}px;
+$side-cortex-opacity: {{ site.side_art.cortex.opacity | default: 0.75 }};
 
 @import
   "variables",
