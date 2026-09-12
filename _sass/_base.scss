@@ -538,6 +538,11 @@ footer.sticky-bottom {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
+  // Same translucent overlay as the navbar, so the side artwork shows through faintly.
+  position: relative;
+  z-index: 1;
+  background-color: var(--global-bg-color);
+  opacity: 0.95;
 
   .container {
     text-align: center;
@@ -638,6 +643,103 @@ footer.sticky-bottom {
     position: relative;
     left: $side-art-content-offset;
   }
+}
+
+// Phone-width tweaks: hide the profile photo and publication preview images
+@media (max-width: 575px) {
+  .profile figure {
+    display: none;
+  }
+
+  .profile .social.profile-social {
+    margin-top: 0;
+  }
+
+  .bibliography .abbr figure {
+    display: none;
+  }
+}
+
+// Teaching
+
+ul.teaching {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  .course-item {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .course-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--global-text-color);
+  }
+
+  .course-code {
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--global-text-color-light);
+    margin-left: 0.4rem;
+    white-space: nowrap;
+  }
+
+  .course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.4rem;
+  }
+
+  .course-role {
+    display: inline-block;
+    padding: 0.1rem 0.65rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: $accent-dark;
+    background-color: rgba($accent-light, 0.3);
+    white-space: nowrap;
+  }
+
+  .course-where {
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+  }
+
+  .course-links {
+    margin-top: 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    a {
+      display: inline-block;
+      padding: 0.1rem 0.6rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 3px;
+      font-size: 0.8rem;
+      color: var(--global-text-color-light);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+html[data-theme="dark"] ul.teaching .course-role {
+  color: $accent-light;
+  background-color: rgba($accent-light, 0.15);
 }
 
 // Talks

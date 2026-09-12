@@ -1,0 +1,40 @@
+# Courses taught or assisted, in display order (newest first).
+# Each entry: title, code, role, term, institution, and optional links (label + url).
+- title: Introduction to Computational Mathematics
+  code: CS 371 / AMATH 242
+  role: Instructor
+  term: Spring 2022
+  institution: University of Waterloo
+  links:
+    - label: Description
+      url: https://uwaterloo.ca/applied-mathematics/current-undergraduates/undergraduate-course-list/amath-242cs-371cm-271-introduction-computational-math
+    - label: Outline
+      url: /assets/pdf/CS371_Outline.pdf
+
+- title: Simulating Neurobiological Systems
+  code: SYDE 556 / 750
+  role: Teaching Assistant
+  term: Fall 2022
+  institution: University of Waterloo
+  links:
+    - label: Description
+      url: https://compneuro.uwaterloo.ca/courses/syde-750.html
+
+- title: Logic and Computation
+  code: CS 245
+  role: Instructional Apprentice
+  term: Fall 2019 & Spring 2020
+  institution: University of Waterloo
+  links:
+    - label: Description
+      url: https://student.cs.uwaterloo.ca/~cs245E/
+
+- title: Calculus 1 for Engineering
+  code: MATH 116
+  role: Teaching Assistant
+  institution: University of Waterloo
+
+- title: Calculus 3 (Non-Specialist Level)
+  code: MATH 207
+  role: Teaching Assistant
+  institution: University of Waterloo
