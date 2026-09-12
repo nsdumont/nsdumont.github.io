@@ -6,6 +6,11 @@
 @use "sass:color";
 
 // Colors
+// Site accent palette (forest greens): dark, medium, light
+$accent-dark: #164a41 !default;
+$accent: #4d774e !default;
+$accent-light: #9dc88d !default;
+
 $red-color: #ff3636 !default;
 $red-color-dark: #b71c1c !default;
 $orange-color: #f29105 !default;

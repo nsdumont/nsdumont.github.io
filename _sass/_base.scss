@@ -804,15 +804,15 @@ ul.repositories {
     border-radius: 2rem;
     font-size: 0.8rem;
     line-height: 1.5;
-    color: #0969da;
-    background-color: #ddf4ff;
+    color: $accent-dark;
+    background-color: rgba($accent-light, 0.3);
     white-space: nowrap;
   }
 }
 
 html[data-theme="dark"] ul.repositories .repo-topic {
-  color: #58a6ff;
-  background-color: rgba(56, 139, 253, 0.15);
+  color: $accent-light;
+  background-color: rgba($accent-light, 0.15);
 }
 
 // Blog
