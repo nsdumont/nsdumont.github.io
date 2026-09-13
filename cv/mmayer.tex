@@ -1,0 +1,469 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[11pt,a4paper,ragged2e,academicons]{altacv}
+\usepackage{multicol}
+% \usepackage{hyperref}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  %\usepackage[default]{lato}
+\fi
+\usepackage{biblatex}
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\definecolor{linkcol}{HTML}{0A58CA}
+
+\usepackage{hyperref}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\hypersetup{
+    colorlinks,
+    allcolors=linkcol
+}
+
+\preto\fullcite{\AtNextCite{\defcounter{maxnames}{99}}}
+
+
+\begin{document}
+\name{Nicole Sandra-Yaffa Dumont}
+\tagline{}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{3.3cm}{profile.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+   \location{Z\"urich, Switzerland}
+   \email{Email:  \href{mailto:nidumon@ini.uzh.ch}{nidumon@ini.uzh.ch}}
+\homepage{Website: \href{http://nsdumont.github.io/}{nsdumont.github.io}} \\
+  \linkedin{LinkedIn: \href{https://www.linkedin.com/in/nicole-dumont/}{nicole-dumont}} 
+   \github{Github: \href{https://github.com/nsdumont}{nsdumont} }
+   %\homepage{compneuro.uwaterloo.ca/people/nicole-dumont.html} % .
+   \scholar{Scholar: \href{https://scholar.google.com/citations?user=2hnh9gkAAAAJ&hl=en}{2hnh9gkAAAAJ}}
+   \orcid{ORCID: \href{https://orcid.org/0000-0001-5041-1527}{ 0000-0001-5041-1527}} % 
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+% \end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+%\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+
+\cvsection{Academic Appointments}
+
+\cvevent{Postdoctoral Researcher}{Institute of Neuroinformatics (University of Zurich \& ETH Zurich)}{Dec 2025 -- Present}{Z\"urich, Switzerland}
+\begin{itemize}
+\item \textbf{Supervisor:} Prof. Katharina Wilmes
+\item Awarded the \textbf{UZH Postdoc Grant}, beginning December 2026.
+\item  \textbf{Predictive Coding (PC) \& Models of Perception and Learning in Cortex }
+\begin{itemize}
+    \item Comparing prediction error modulation by learned uncertainty signals and how this mechanism differs from top-down, goal-conditioned attentional modulation. 
+    \item Developing PC networks for multi-sensory integration to better understand integration circuits in the brain. 
+\end{itemize}
+\end{itemize}
+
+\cvsection{Education}
+
+\cvevent{Ph.D in Computer Science \\ \normalsize Diploma in Theoretical Neuroscience}{University of Waterloo}{Sept 2019 -- April 2025}{Waterloo, Canada}
+\begin{itemize}
+\item \textbf{Supervisors:} Prof. Chris Eliasmith and Prof. Jeff Orchard
+\item \textbf{Dissertation:} \emph{Symbols, Dynamics, and Maps: A Neurosymbolic Approach to Spatial Cognition} \href{https://hdl.handle.net/10012/21501}{[Link]}
+    \item \textbf{Neuro-Symbolic Modeling for Spatial Representation \& Mapping}
+\begin{itemize}\setlength\itemsep{0em}
+        \item Developed Spatial Semantic Pointers (SSPs) as a grid cell-inspired representation of continuous features, enabling the integration of symbolic structure and uncertainty in biologically plausible neural models.
+        \item Built spiking neural network models of path integration, cognitive mapping, and SLAM that use neurosymbolic methods to bind continuous and discrete features to create compositional embeddings. % leveraging SSPs for robust spatial inference on neuromorphic hardware.
+     \end{itemize}
+\item \textbf{Reinforcement Learning (RL) \& Action Selection}
+\begin{itemize}\setlength\itemsep{0em}
+\item Designed biologically plausible online learning rules for RL in continuous-time settings using State Space Model-based memory systems.
+% \item Improved sample efficiency during navigation using SSPs and structured scene representations as inputs to deep RL frameworks.
+\item Incorporated SSPs into Bayesian Optimization and deep RL frameworks, modeling predictive inference and decision-making under uncertainty.
+
+%The Bayesian Optimization work was an INRC-funded project.
+
+% in complex, multi-agent environments.
+%     \item Achieved substantial gains in sample efficiency and compute time by leveraging structured internal models, mirroring cortical strategies for active exploration.
+% \en
+% \item Integrated SSPs into Bayesian Optimization frameworks for active exploration, achieving up to 175x reduction in compute time in multi-agent environments.
+    \end{itemize}
+    % \item \textbf{Interdisciplinary:} Research at the crossroads of cognitive science and computational neuroscience that advanced models integrating symbolic structure with neural dynamics to explain spatial cognition.
+ \end{itemize}
+ \vspace{-2pt}
+\divider
+
+\smallskip
+
+
+
+\cvevent{Computational Mathematics (Masters of Mathematics -- Co-op Program)}{University of Waterloo}{Sept 2017 -- April 2019}{Waterloo, Canada}
+% \begin{itemize}
+% \item \textbf{Supervisor:} Prof. Thomas F. Coleman 
+% \item \textbf{Thesis Project:} \emph{The Optimal Social Cost of Carbon \& The Cost of Inaction}
+    % \item Developed and analyzed a robust optimization algorithm for carbon pricing models, integrating applied mathematics methods with real-world policy modeling.
+% \item Applied automatic differentiation and Quasi-Newton methods to improve scalability, parameter sensitivity analysis, and robust optimization under uncertainty.
+    %automatic differentiation
+% and Quasi-Newton optimization to the EZ model, we significantly improve its computational
+% performance. This improvement allows for increased scalability, parameter sensitivity anal-
+% ysis, robust optimization, and evaluations of suboptimal policies
+    % \item Cumulative average of 91 \% in course work, which included courses on optimization, computational statistics, numerical analysis, PDEs, and computational neuroscience.
+% \end{itemize}
+% \begin{itemize}
+% \item Cumulative average of 91 \% 
+% \item Completed a masters research paper on robust optimization of an asset pricing model used to price carbon emissions.
+% \item Courses on optimization, computational statistics, numerical analysis, PDEs, and computational neuroscience.
+% \end{itemize}
+
+
+\divider
+\smallskip
+
+\cvevent{Honours Mathematics and Physics (Bachelors of Science) }{McMaster University}{Sept 2012 -- April 2017}{Hamilton, Canada}
+%\begin{itemize}
+ %\item Graduated with distinction. Courses on statistical mechanics, dynamical systems, mathematical biology, quantum computing, and scientific computation.
+% \item Cumulative average of 10.5/12.0 (GPA 3.8)
+%\end{itemize}
+
+%\divider
+ % \vspace{-10pt}
+\cvsection{Work Experience}
+% \smallskip
+
+
+\cvevent{Research Associate}{Computational Neuroscience Research Group, University of Waterloo}{April 2025 -- Nov 2025}{Waterloo, Canada}
+\begin{itemize}
+    \item Contributed to the incorporation of spatial reasoning and embodiment in Spaun 3.0, a large-scale functional brain model.
+\end{itemize}
+
+%\pagebreak
+\divider
+
+\cvevent{Neuromorphic Scientist}{Applied Brain Research}{Jan 2023 -- Jan 2024}{Waterloo, Canada}
+\begin{itemize}
+    \item Integrated a biologically-inspired SLAM algorithm into a MuJoCo simulation environment and deployed it on low-power neuromorphic hardware (Intel Loihi chip).
+\end{itemize}
+% 
+
+\divider
+% \smallskip
+
+\cvevent{Research Associate}{Cayuga Research}{May 2018 -- Aug 2019}{Waterloo, Canada}
+ \begin{itemize}
+     \item Consulting work focused on developing optimization methods and data-driven solutions for industrial applications.
+%     % \item Built a global optimization toolbox in MATLAB.
+% %\item Created prototype flight path optimization software achieving ~5\% fuel savings compared to real flights.
+% %\item Designed and tested chiller plant optimization models, producing ~4\% energy savings.
+ \end{itemize}
+%     \item Projects included development of a global optimization toolbox in Matlab, prototype flight path optimization software, and chiller plant optimization \& modelling.
+% \end{itemize}
+% \begin{itemize}
+% \item Worked as a part of a team for consulting work focused on the development and implementation of advanced optimization methods and data driven solutions to industrial problems. 
+% %\item Developed a global optimization toolbox in Matlab
+% \item Built prototype flight path optimization software able to plan flights that save up to 5\% in fuel costs compared to real commercial flights. 
+% \item Worked on a chiller plant optimization problem, developing data-driven models of the plant components and an optimization method that produced 4\% energy savings.
+% \end{itemize}
+% \vspace{-0.4cm}
+ \divider
+% \smallskip
+
+ \cvevent{Research Assistant}{Ayers Research Group, McMaster University}{May 2015 -- Aug 2015}{Hamilton, Canada}
+% \begin{itemize}
+%\item Constructed equations constraining a two-electron reduced density matrix (2-RDM) to represent a many-electron quantum system.
+% \begin{itemize}
+% \item Implemented a semi-definite optimization algorithm constraining two-electron reduced density matrices (2-RDMs) to represent many-electron quantum systems.
+% \end{itemize}
+
+
+% \newpage
+\cvsection{Research}
+\footnotesize h-index = 7, i10-index = 5, total citations = 171 (Google Scholar on 25/08/2026)
+\begin{flushright}
+\vspace{-1.5em} 
+\footnotesize \textsuperscript{\textdagger} = These authors contributed equally %\vspace{-2.5em}
+\end{flushright}
+\normalsize
+\cvsubsection{Publications \& Conference Proceedings}
+
+\begin{itemize}
+\item \fullcite{furlong2025} \href{doi.org/10.1038/s41467-026-75703-4}{[Link]}
+\item \fullcite{dumont2023exploiting} \href{https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1190515/full}{[Link]}
+\item \fullcite{dumont2023biologically} \href{https://compneuro.uwaterloo.ca/files/publications/dumont2023brainsci.pdf}{[Link]}
+\item \fullcite{voelker2021simulating} \href{https://compneuro.uwaterloo.ca/files/publications/voelker.2021a.pdf}{[Link]}
+\item \fullcite{coleman2021optimal} \href{https://link.springer.com/article/10.1007/s10614-021-10179-6}{[Link]}
+\end{itemize}
+
+% 
+\divider
+
+\cvsubsection{Conference Proceedings \& Posters}
+
+\begin{itemize}
+\item \fullcite{dumont2026}
+\item \fullcite{simone2026}\href{https://escholarship.org/uc/item/84x3v8n0}{[Link]}
+\item \fullcite{furlong2024biologically} \href{https://compneuro.uwaterloo.ca/files/furlong2024.VSA.sampling.ICANN.pdf}{[Link]}
+\item \fullcite{furlong2024recurrent} \href{https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10548051}{[Link]}
+\item \fullcite{bartlett2023improving} \href{https://compneuro.uwaterloo.ca/files/ICCM_Bartlett2023.pdf}{[Link]}
+\item \fullcite{dumont2022} \href{https://escholarship.org/uc/item/3pf7f9b4}{[Link]}
+\item \fullcite{bartlett2022} \href{https://cs.uwaterloo.ca/~jorchard/academic/Bartlett_ICCM2022.pdf}{[Link]}
+\item \fullcite{dumont2021} \href{https://static1.squarespace.com/static/6102ca347474c263c40150cd/t/610870a432c9d257a80cace4/1627943077187/Cosyne2021_program_book.pdf}{[Link]}
+    \item \fullcite{dumont2020} \href{http://compneuro.uwaterloo.ca/files/publications/dumont.2020.pdf}{[Link]}
+\end{itemize}
+
+\divider
+
+\cvsubsection{Manuscripts}
+\begin{itemize} 
+\item \fullcite{sainz2026neural} \href{https://www.biorxiv.org/content/10.64898/2026.02.18.706604v1}{[Link]}
+\end{itemize}
+
+% \divider
+ % \pagebreak
+
+%\cvsubsection{Thesis}
+%\begin{itemize} 
+%\item \fullcite{dumont2025} \href{https://hdl.handle.net/10012/21501}{[Link]}
+%\end{itemize}
+
+
+% \divider
+
+\pagebreak
+
+
+\cvsubsection{Patents}
+\begin{itemize} 
+\item \fullcite{voelker2022methods} \href{https://patents.google.com/patent/US20220138382A1/}{[Link]}
+\end{itemize}
+
+% \divider 
+
+\cvsection{Teaching and Supervision}
+\begin{itemize}
+\item \textbf{Masters supervision (2026-present):} 
+Supervising a masters student thesis project on learning compositional neural representation for planning and reasoning with tree diffusion. 
+\item \textbf{Student supervision (2020):} Supervised an undergraduate research assistant during a four-month project developing a novel algorithm for learning successor features for reinforcement learning.
+\item \textbf{Introduction to Computational Mathematics (2022):} Sole instructor for two sections of this course, teaching over 120 students. Planned course content and developed lectures, assignments, and exams. %In the Student Course Perceptions survey, over 80\% of students agreed that I helped them understand the course concepts and fostered a supportive learning environment. %is a rigorous introduction to numerical methods.
+    \item \textbf{Logic and Computation (2020):} Served as an Instructional Apprentice for an introductory course in mathematical logic. Led tutorials, graded assignments, and provided assistance during office hours.
+    \item \textbf{Teaching Assistantships (2017-2022):} Served as a TA in six undergraduate courses in mathematics and computer science.
+\end{itemize}
+
+% \divider
+
+% \cvsection{Skills}
+%  \textbf{Programming languages:} Python, MATLAB, R, C++
+ 
+% \textbf{Neural \& Machine Learning Frameworks:} PyTorch, Nengo, Nengo-Loihi, SNNTorch
+
+% \textbf{Scientific Communication \& Leadership:} Workshop organization, peer review, international collaboration
+
+\setlength{\columnsep}{0.07cm} %%%
+\cvsection{Academic Service}
+% \vspace{-10pt}
+\begin{itemize}
+    \item \textbf{Leadership \& Organization}
+\begin{itemize}
+\item Topic Area Leader, Spatiotemporal Dynamics in Neural Computation, Telluride Neuromorphic
+AI Workshop (2026)
+    \item Topic Area Leader, Language and Thought, Telluride Neuromorphic Cognition Engineering Workshop (2025): Successfully proposed and led a topic area; delivered tutorials on cognitive mapping models; mentored PhD-level researchers through the full project lifecycle from conceptualization to demonstrations for the public.
+\item Invited Speaker \& Co-Organizer, Telluride Neuromorphic Cognition Engineering Workshop (2024)
+\end{itemize}
+\item \textbf{Instruction \& Training}
+\begin{itemize}
+    \item Instructor, Nengo Summer School (2023, 2024, 2025): Led tutorials and mentored participants developing neural models using the Nengo framework.
+\end{itemize}
+\item \textbf{Peer Review:} Reviewer for \emph{Nature Communications}, \emph{Communications Biology}, \emph{CogSci 2025}, and \emph{Frontiers in Computational Neuroscience} 
+\end{itemize}
+
+% \noindent
+% \begin{minipage}{0.55\linewidth}
+%     \begin{itemize}
+% \item  Co-Organizer of the Language and Thought Topic Area, Telluride Neuromorphic Cognition Engineering Workshop (\textbf{2025})
+% \item  Reviewer, Nature Communications (\textbf{2025}) 
+% \item  Reviewer, CogSci 2025 (\textbf{2025})
+
+% \end{itemize}
+% \end{minipage}
+% \begin{minipage}{0.45\linewidth}
+% \hfill
+% \begin{itemize}
+% \item  Invited speaker, Telluride Neuromorphic Cognition Engineering Workshop (\textbf{2024})
+% \item  Instructor, Nengo Summer School (\textbf{2024, 2023})
+% \item  Reviewer, Frontiers in Neuroscience (\textbf{2024}) %Peer-reviewed two manuscripts as a
+% \end{itemize}
+% \end{minipage}
+% \vspace{0.2em}
+
+
+% \divider
+
+\cvsection{Awards \& Distinctions}
+% \vspace{-10pt}
+% \vspace{-1em}
+\noindent
+\begin{itemize}
+\item UZH Postdoc Grant (2026)
+\item Marie Skłodowska-Curie Postdoctoral Fellowship (MSCA-PF) Seal of Excellence (2026)
+    \item Best New Neuromorph, Telluride Neuromorphic Cognition Engineering Workshop  (2024)
+\item European Neural Network Society Best Paper Award (2024)
+\item Barbara Hayes-Roth Award for Women in Math and Computer Science (2022)
+\item GO-Bell Scholarship (2019–2021)
+\item Provost Doctoral Entrance Award for Women (2019)
+\item Keith \& Debbie Geddes Graduate Scholarship (2019)
+\item University of Waterloo Graduate Scholarship (2018–2019)
+\item Emanuel Williams Scholarship in Physics (2014)
+\end{itemize}
+% \begin{minipage}{0.54\linewidth}
+%     \begin{itemize}
+%     \item  Best New Neuromorph, Telluride Neuromorphic Cognition Engineering Workshop (\textbf{2024})
+% \item  European Neural Network Society  (ENNS) Best Paper Award (\textbf{2024})
+%     \item Barbara Hayes-Roth Award for Women in Math and Computer Science (\textbf{2022}) 
+%     \end{itemize}
+% \end{minipage}
+% \begin{minipage}{0.46\linewidth}
+% \hfill
+% \begin{itemize}
+% \item  GO-Bell Scholarship (\textbf{2019-2020}) 
+%     \item  Provost Doctoral Entrance Award for Women (\textbf{2019})
+%     \item  Keith \& Debbie Geddes Graduate Scholarship (\textbf{2019})
+%     \item University of Waterloo Graduate Scholarship (2018, 2019)
+%     \item  The Emanuel Williams Scholarship in Physics (\textbf{2014})
+% \end{itemize}
+% \end{minipage}
+    % \end{multicols}
+
+
+% \noindent
+% \begin{minipage}{0.4\linewidth}
+%     \begin{itemize}
+% \item \textbf{2024} -- European Neural Network Society Best Paper Award  
+%     \item \textbf{2022} -- Barbara Hayes-Roth Award for Women in Math and Computer Science 
+% \end{itemize}
+% \end{minipage}
+% \begin{minipage}{0.5\linewidth}
+% \hfill
+% \begin{itemize}
+%  \item \textbf{2020}, \textbf{2019} -- Go-Bell Scholarship 
+%     \item \textbf{2019} -- Provost Doctoral Entrance Award for Women 
+%     \item \textbf{2019} -- Keith \& Debbie Geddes Graduate Scholarship 
+%     %\item University of Waterloo Graduate Scholarship (2018, 2019)
+%     \item \textbf{2014} -- The Emanuel Williams Scholarship in Physics
+% \end{itemize}
+% \end{minipage}
+
+
+
+
+
+% \cvsection{Academic Projects}
+% % \cvproject{Spiking neural network model of simultaneous localization and mapping with Spatial Semantic Pointers}{Poster presentation; Cosyne 2021}
+% % \smallskip
+% % \begin{itemize}
+% % \item Proposed a biological-plausible SLAM model called SSP-SLAM that uses a hybrid oscillatory interference/ continuous attractor network of grid cells for path integration.
+% % \end{itemize}
+
+% % \divider
+
+
+% \cvproject{Successor Features for Transfer Learning in an Advantage Actor-Critic Framework}{Course Project; CS 885: Reinforcement Learning}
+% \smallskip
+% \begin{itemize}
+% \item Implemented an A2C model for reinforcement learning in pytorch that uses a new method for learning successor features called Generalized Successor Estimation.
+% \end{itemize}
+
+% \divider
+
+% %\cvproject{Spatial Memory with Semantic Pointers}{SYDE 750: Simulating Neurobiological Systems}
+% %\smallskip
+% %\begin{itemize}
+% %\item Implemented a method for encoding continuous variables with spiking neurons using the Semantic Pointer Architecture and the Nengo library. 
+% %\end{itemize}
+
+
+
+% \cvproject{Constructing Textual Artificial Conversational Entities using Deep Learning}{Course Project; STAT 841: Statistical Learning - Classification}
+% \smallskip
+% \begin{itemize}
+% \item Built a chatbot using a sequence-to-sequence model with long short-term memory (LSTM) units and an attention mechanism. 
+% \end{itemize}
+% \smallskip
+
+% \divider
+
+% \cvproject{Dirichlet Mixture Model Library}{Course Project; STAT 840: Computational Inference}
+% \smallskip
+% \begin{itemize}
+% \item Developed a library in Julia (and an R package wrapper) using Dirichlet process mixture models to perform unsupervised, non-parametric clustering.
+% \end{itemize}
+% \smallskip
+
+% \cvsection{Hobbies and Interests}
+% In my spare time, I enjoy getting creative with photography and painting, and camping on the Canadian shield. 
+
+%I  volunteering, and organizing work in the student community.
+
+%\cvproject{Spatial Epidemics Dynamics and Synchronization}{Course Project; Math 4MB3: Mathematical Biology}
+%\smallskip
+%\begin{itemize}
+%\item Implemented a stochastic model of infectious disease spread and investigated the conditions required for spatial synchronization of disease outbreaks. 
+%\end{itemize}
+
+
+
+
+
+\end{fullwidth}
+\end{document}

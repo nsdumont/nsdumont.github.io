@@ -1,0 +1,10 @@
+<ul class="cv-items">
+  {% for it in include.items %}
+    <li>
+      {{ it.html }}
+      {% if it.children %}
+        {% include cv/items.liquid items=it.children %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

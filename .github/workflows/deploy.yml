@@ -8,6 +8,7 @@ on:
     paths:
       - "assets/**"
       - "_sass/**"
+      - "cv/**"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -25,6 +26,7 @@ on:
     paths:
       - "assets/**"
       - "_sass/**"
+      - "cv/**"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -52,6 +54,14 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
+      - name: Build CV PDF from LaTeX 📄
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: cv
+          root_file: mmayer.tex
+          latexmk_use_lualatex: true
+      - name: Copy CV PDF into site assets 📎
+        run: cp cv/mmayer.pdf assets/pdf/CV.pdf
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick

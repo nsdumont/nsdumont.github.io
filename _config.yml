@@ -55,6 +55,10 @@ bib_search: true
 # Dimensions
 max_width: 930px
 
+# CV: LaTeX source parsed into the /cv/ page at build time (see cv/README.md).
+# The PDF for the download link is compiled from the same file in the deploy workflow.
+cv_tex: cv/mmayer.tex
+
 # Decorative artwork fixed along the left edge of the viewport.
 # mode: "grid" (random squares), "cortex" (Cajal-style cortical column drawing), or "none" to turn it off.
 side_art:
@@ -133,6 +137,7 @@ kramdown:
 include: ["_pages", "_scripts"]
 exclude:
   - bin/
+  - cv/ # LaTeX CV sources; parsed at build time by _plugins/cv-from-tex.rb, not copied to the site
   - Gemfile
   - Gemfile.lock
   - LICENSE

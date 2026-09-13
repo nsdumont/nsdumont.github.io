@@ -1,0 +1,34 @@
+{% for b in include.blocks %}
+  {% case b.type %}
+    {% when 'subsection' %}
+      <h3 class="cv-subsection">{{ b.title }}</h3>
+    {% when 'event' %}
+      <div class="cv-event">
+        <div class="cv-event-head">
+          <div class="cv-event-main">
+            <div class="cv-event-title">{{ b.title }}</div>
+            {% if b.org and b.org != '' %}
+              <div class="cv-event-org">{{ b.org }}</div>
+            {% endif %}
+          </div>
+          {% if b.dates or b.location %}
+            <div class="cv-event-meta">
+              {% if b.dates and b.dates != '' -%}
+                <span><i class="fa-regular fa-calendar"></i>{{ b.dates }}</span>
+              {%- endif %}
+              {% if b.location and b.location != '' -%}
+                <span><i class="fa-solid fa-location-dot"></i>{{ b.location }}</span>
+              {%- endif %}
+            </div>
+          {% endif %}
+        </div>
+        {% if b.items %}{% include cv/items.liquid items=b.items %}{% endif %}
+      </div>
+    {% when 'items' %}
+      {% include cv/items.liquid items=b.items %}
+    {% when 'text' %}
+      <p class="cv-text{% if b.small %} small{% endif %}{% if b.align %} {{ b.align }}{% endif %}">{{ b.html }}</p>
+    {% when 'divider' %}
+      <hr class="cv-divider">
+  {% endcase %}
+{% endfor %}

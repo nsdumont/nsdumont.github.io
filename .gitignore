@@ -11,3 +11,17 @@ assets/libs/
 node_modules/
 vendor
 .idea
+
+# LaTeX build artifacts for the CV (the PDF is built in CI and copied to assets/pdf/CV.pdf)
+cv/*.aux
+cv/*.bbl
+cv/*.bcf
+cv/*.blg
+cv/*.fdb_latexmk
+cv/*.fls
+cv/*.log
+cv/*.out
+cv/*.run.xml
+cv/*.synctex.gz
+cv/*.xdv
+cv/*.pdf
