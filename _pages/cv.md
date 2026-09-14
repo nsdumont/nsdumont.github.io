@@ -2,6 +2,7 @@
 layout: page
 permalink: /cv/
 title: cv
+meta_description: "Curriculum vitae of Nicole Dumont, postdoctoral researcher in computational neuroscience at the Institute of Neuroinformatics (UZH/ETH Zürich): education, research positions, publications, talks, teaching, and awards."
 nav: true
 nav_order: 3
 description:

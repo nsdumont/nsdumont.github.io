@@ -7,8 +7,10 @@ first_name: Nicole
 middle_name: Sandra-Yaffa
 last_name: Dumont
 contact_note:
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Nicole Dumont's webpage
+description: >- # the ">-" symbol folds newlines and strips the trailing one
+  Nicole Dumont is a postdoctoral researcher in computational neuroscience at the Institute of Neuroinformatics (UZH/ETH Zürich) |
+  predictive coding | attention and uncertainty in neural circuits | spiking neural networks | spatial semantic pointers |
+  vector symbolic architectures | spatial cognition
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -86,9 +88,9 @@ side_art:
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: /assets/img/dumont.jpeg # The site-wide (default for all links) Open Graph preview image (site-relative paths are made absolute)
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -169,6 +171,15 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: "googlea84371d376b565a0.html"
+    values:
+      sitemap: false
+  - scope:
+      path: ""
+      type: news
+    values:
+      sitemap: false # one-line announcements are thin pages; keep them out of the sitemap
 
 sass:
   style: compressed
@@ -179,7 +190,8 @@ sass:
 
 jekyll-minifier:
   compress_javascript: false # set to false since we are using terser as the js minifier
-  # exclude: ["robots.txt", "assets/js/search/*.js"]
+  # robots.txt and the Search Console verification file must keep their line breaks
+  exclude: ["robots.txt", "googlea84371d376b565a0.html", "assets/js/search/*.js"]
 
 # -----------------------------------------------------------------------------
 # Terser
@@ -211,8 +223,11 @@ scholar:
   replace_strings: true
   join_strings: true
 
-  details_dir: bibliography
-  details_link: Details
+  # One page per publication (title, authors, venue, abstract, bibtex, links) at /publications/<bibtex key>/
+  details_dir: publications
+  details_layout: paper.html
+  details_permalink: /:details_dir/:key/
+  details_link: false # the paper title links to the details page instead of a separate "Details" link
 
   query: "@*"
   group_by: year
