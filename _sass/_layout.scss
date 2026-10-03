@@ -48,15 +48,15 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
-  font-family: "Fraunces", Georgia, "Times New Roman", serif;
-  // Pin the optical size instead of letting it follow the font size: the automatic
-  // "9pt" cut used for body text is heavier and rougher, especially on Windows.
-  font-variation-settings: "opsz" 36;
+  // Trial: Lora (Google Fonts). Swap back to "Fraunces" to restore the previous font.
+  font-family: "Lora", "Fraunces", Georgia, "Times New Roman", serif;
+  // Fraunces-only optical-size axis; re-enable these two blocks if you return to Fraunces.
+  // font-variation-settings: "opsz" 36;
 
-  h1,
-  h2 {
-    font-variation-settings: "opsz" 96;
-  }
+  // h1,
+  // h2 {
+  //   font-variation-settings: "opsz" 96;
+  // }
 
   h1,
   h2,
