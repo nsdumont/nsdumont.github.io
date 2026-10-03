@@ -74,15 +74,22 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_7/";
-            },},{id: "news-presentation-at-the-znz-annual-symposium",
-          title: 'Presentation at the ZNZ Annual Symposium',
+            },},{id: "news-lightning-talk-at-the-znz-annual-symposium",
+          title: 'Lightning talk at the ZNZ Annual Symposium',
           description: "",
-          section: "News",},{
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_9/";
+            },},{id: "news-poster-at-the-bernstein-conference-2026",
+          title: 'Poster at the Bernstein Conference 2026',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_10/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6E%73%32%64%75%6D%6F%6E%74@%75%77%61%74%65%72%6C%6F%6F.%63%61", "_blank");
+          window.open("mailto:%6E%69%64%75%6D%6F%6E@%69%6E%69.%75%7A%68.%63%68", "_blank");
         },
       },{
         id: 'social-github',
