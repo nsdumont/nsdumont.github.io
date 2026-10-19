@@ -15,6 +15,12 @@
   const seedCfg = parseInt(root.dataset.seed, 10) || 0;
   const animate = root.dataset.animate !== "false";
   const pulseInterval = (parseFloat(root.dataset.pulseInterval) || 6) * 1000;
+  // Scrolling sweeps a slow wave of ink through the column: each neuron's opacity
+  // oscillates around its resting value as the page moves.
+  const scrollAmplitude = parseFloat(root.dataset.scrollAmplitude);
+  const SCROLL_AMP = isNaN(scrollAmplitude) ? 0.35 : scrollAmplitude;
+  const SCROLL_PERIOD = parseFloat(root.dataset.scrollPeriod) || 600; // px of scroll per full cycle
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const NS = "http://www.w3.org/2000/svg";
 
   // Seeded PRNG so the drawing can be stable across page loads.
@@ -70,7 +76,22 @@
   function group(opacity) {
     const g = el("g", { class: "neuron" });
     g.style.opacity = opacity.toFixed(2);
+    g.dataset.base = opacity.toFixed(2);
+    g.dataset.phase = R(0, Math.PI * 2).toFixed(3);
     return g;
+  }
+
+  // Set every neuron's opacity from the scroll position: resting value plus a
+  // wave whose phase differs per cell, so the column shimmers rather than blinks.
+  function applyScroll(y) {
+    const t = (y / SCROLL_PERIOD) * Math.PI * 2;
+    for (let i = 0; i < neurons.length; i++) {
+      const g = neurons[i];
+      if (g.classList.contains("pulse")) continue;
+      const base = parseFloat(g.dataset.base);
+      const v = base + SCROLL_AMP * Math.sin(t + parseFloat(g.dataset.phase));
+      g.style.opacity = Math.max(0.08, Math.min(1, v)).toFixed(2);
+    }
   }
 
   // Pyramidal cell: triangular soma, apical dendrite rising to `apicalTop`,
@@ -228,13 +249,21 @@
     }
   }
 
-  if (animate) {
+  if (animate && !reduceMotion) {
     setInterval(() => pulse(1), pulseInterval);
     let lastY = window.scrollY;
     let cooldown = false;
+    let ticking = false;
     window.addEventListener(
       "scroll",
       function () {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(() => {
+            applyScroll(window.scrollY);
+            ticking = false;
+          });
+        }
         if (cooldown) return;
         const y = window.scrollY;
         if (Math.abs(y - lastY) < 60) return;
@@ -254,4 +283,5 @@
   });
 
   build();
+  if (animate && !reduceMotion) applyScroll(window.scrollY);
 })();

@@ -7,6 +7,7 @@ nav: true
 nav_order: 3
 description:
 toc: false
+hide_title: true # the CV header carries the name; no page heading above it
 ---
 
 {% assign cv = site.data.cv %}

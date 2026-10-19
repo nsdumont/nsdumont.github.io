@@ -44,20 +44,31 @@ $latin-ext: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, 
   unicode-range: $latin-ext;
 }
 
+// Type scale
+// Prose at 17px (the platform's default reading size) with a generous measure;
+// headings carry hierarchy through size and weight, not colour. UI chrome
+// (navigation, buttons, badges, metadata) uses the system face via .ui-text or
+// the component rules in _base.scss.
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
-  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-family: $font-serif;
+  font-size: 1.0625rem; // 17px
+  line-height: 1.6;
   // Pin the optical size instead of letting it follow the font size: the automatic
   // "9pt" cut used for body text is heavier and rougher, especially on Windows.
   font-variation-settings: "opsz" 36;
+  text-rendering: optimizeLegibility;
 
   h1,
-  h2 {
+  h2,
+  h3 {
     font-variation-settings: "opsz" 96;
   }
 
+  // Heading sizes and weights are the framework defaults (2.5 / 2 / 1.75rem, weight 500),
+  // which is how Fraunces was set on the site originally.
   h1,
   h2,
   h3,
@@ -65,6 +76,63 @@ body {
   h5,
   h6 {
     scroll-margin-top: 66px;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+// Shared UI face for controls and metadata.
+.ui-text,
+.navbar,
+.btn,
+.publications .links,
+.course-links,
+.badge,
+.post-meta,
+.post-tags,
+.post-description,
+footer,
+ninja-keys,
+.bibsearch-form-input,
+.course-role,
+.course-code,
+.repo-topic,
+.talk-date,
+.talk-link,
+.cv-page,
+.news .news-date,
+.publications .abbr,
+.paper-breadcrumb,
+#back-to-top {
+  font-family: $font-ui;
+  font-variation-settings: normal;
+  letter-spacing: normal;
+}
+
+// CV: UI face for the body at 16px, Fraunces for the name and the titles.
+.cv-page {
+  font-size: 1rem;
+
+  .cv-name,
+  h2.cv-section,
+  h3.cv-subsection,
+  .cv-event-title {
+    font-family: $font-serif;
+    font-variation-settings: "opsz" 96;
+  }
+
+}
+
+@media (max-width: 575px) {
+  body {
+    font-size: 1rem;
   }
 }
 
@@ -97,6 +165,13 @@ body.sticky-bottom-footer {
 .profile {
   img {
     width: 100%;
+    border-radius: $radius-md;
+    box-shadow: $shadow-soft;
+  }
+
+  // Replace MDB's heavy elevation with the site's single soft shadow.
+  .z-depth-1 {
+    box-shadow: $shadow-soft !important;
   }
 }
 
@@ -113,3 +188,122 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+/******************************************************************************
+ * Accessibility and system preferences
+ ******************************************************************************/
+
+// Visible keyboard focus everywhere, in the accent colour, without affecting
+// pointer clicks. MDB and Bootstrap strip outlines; restore them.
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--global-focus-ring-color);
+  outline-offset: 2px;
+  border-radius: $radius-sm;
+}
+
+.navbar .nav-link:focus-visible,
+.btn:focus-visible,
+#light-toggle:focus-visible,
+#search-toggle:focus-visible {
+  outline-offset: 0;
+}
+
+// Skip straight to the content for keyboard and screen reader users.
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 2000;
+  padding: 0.5rem 0.875rem;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: $radius-sm;
+  box-shadow: $shadow-soft;
+  font-family: $font-ui;
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  &:focus {
+    top: 0.75rem;
+    outline: 2px solid var(--global-focus-ring-color);
+    outline-offset: 2px;
+    text-decoration: none;
+  }
+}
+
+// Motion is optional: stop every non-essential animation when asked.
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html.transition,
+  html.transition *,
+  html.transition *:before,
+  html.transition *:after {
+    transition: none !important;
+  }
+
+  .side-cortex .neuron,
+  .side-cortex .neuron.pulse {
+    transition: none !important;
+  }
+
+  ul.talks .talk-thumb:hover img {
+    transform: none;
+  }
+}
+
+// Reduced transparency: bars become opaque instead of blurring the content behind them.
+@media (prefers-reduced-transparency: reduce) {
+  .navbar,
+  footer.sticky-bottom {
+    background-color: var(--global-bg-color) !important;
+    opacity: 1 !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
+
+// Increased contrast: thicken hairlines and underline links in prose.
+@media (prefers-contrast: more) {
+  :root,
+  html[data-theme="dark"] {
+    --global-divider-color: currentColor;
+  }
+
+  article a:not(.btn) {
+    text-decoration-thickness: 2px;
+  }
+}
+
+// Larger text sizes: let the profile column stack above the prose sooner.
+@media (max-width: 767px) {
+  .profile.float-right,
+  .profile.float-left {
+    float: none !important;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+// Item titles (publications, CV entries, courses, talks, repositories): medium weight.
+.publications ol.bibliography li .title,
+.post.paper .publications h1.title,
+.cv-page .cv-event-title,
+ul.teaching .course-title,
+ul.talks .talk-title,
+ul.repositories .repo-title {
+  font-weight: 500;
+}

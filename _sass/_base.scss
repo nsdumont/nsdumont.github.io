@@ -38,9 +38,11 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
 
   &:hover {
-    color: var(--global-theme-color);
+    color: var(--global-hover-color);
     text-decoration: underline;
   }
 
@@ -48,6 +50,7 @@ table.table a {
     width: 100%;
   }
 }
+
 
 .table-dark {
   background-color: transparent;
@@ -60,8 +63,9 @@ blockquote {
   background: var(--global-bg-color);
   border-left: 5px solid var(--global-theme-color);
   margin: 1.5em 0;
-  padding: 1em;
-  font-size: 1.2rem;
+  padding: 1em 1.25em;
+  font-size: inherit;
+  border-radius: 0 $radius-sm $radius-sm 0;
 
   p {
     margin-bottom: 0;
@@ -229,7 +233,8 @@ ul.task-list input[type="checkbox"] {
 
 .post-description {
   margin-bottom: 2rem;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
+  color: var(--global-text-color-light);
 
   a {
     color: inherit;
@@ -246,8 +251,19 @@ ul.task-list input[type="checkbox"] {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  background-color: var(--global-bar-bg-color);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  min-height: 56px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+// The expanded menu on narrow screens needs a solid surface to read against.
+.navbar .navbar-collapse.show,
+.navbar .navbar-collapse.collapsing {
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .navbar .dropdown-menu {
@@ -285,23 +301,40 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-brand {
     color: var(--global-text-color);
+    font-family: $font-serif;
+    font-variation-settings: "opsz" 96;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: 0;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    margin-right: 1.5rem;
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    font-size: 0.9375rem; // 15px
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: $radius-sm;
+    transition:
+      color 0.15s ease,
+      background-color 0.15s ease;
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-text-color);
+      background-color: var(--global-control-bg-color);
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: bolder;
+    font-weight: 600;
     color: var(--global-theme-color);
 
     &:hover {
       color: var(--global-hover-color);
+      background-color: var(--global-control-bg-color);
     }
   }
 
@@ -389,10 +422,49 @@ ul.task-list input[type="checkbox"] {
   border: 0;
   background-color: inherit;
   color: var(--global-text-color);
+  border-radius: $radius-sm;
 
   &:hover {
-    color: var(--global-hover-color);
+    color: var(--global-text-color);
+    background-color: var(--global-control-bg-color);
   }
+}
+
+#search-toggle .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  i {
+    font-size: 1.05em;
+  }
+
+  kbd {
+    font-family: $font-ui;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 0.2rem 0.35rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    color: var(--global-text-color-light);
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 575px) {
+  #search-toggle .nav-link kbd {
+    display: none;
+  }
+}
+
+#light-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 // Social (bottom)
@@ -535,17 +607,26 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 0.9rem;
-  // Same translucent overlay as the navbar, so the side artwork shows through faintly.
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 0.8125rem; // 13px
+  line-height: 1.5;
+  color: var(--global-footer-text-color);
   position: relative;
   z-index: 1;
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  background-color: var(--global-footer-bg-color);
 
   .container {
     text-align: center;
+    color: var(--global-footer-text-color);
+  }
+
+  a {
+    color: var(--global-footer-link-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
   }
 }
 
@@ -624,7 +705,7 @@ footer.sticky-bottom {
   opacity: $side-cortex-opacity;
 
   .neuron {
-    transition: opacity 3s ease;
+    transition: opacity 0.6s ease-out;
   }
 
   .neuron.pulse {
@@ -716,8 +797,8 @@ footer.sticky-bottom {
 
   h2.cv-section {
     font-size: 1.5rem;
-    margin-top: 2rem;
-    padding-bottom: 0.3rem;
+    margin-top: 2.5rem;
+    padding-bottom: 0.4rem;
     border-bottom: 1px solid var(--global-divider-color);
   }
 
@@ -848,12 +929,13 @@ ul.teaching {
 
   .course-role {
     display: inline-block;
-    padding: 0.1rem 0.65rem;
-    border-radius: 2rem;
-    font-size: 0.8rem;
+    padding: 0.15rem 0.7rem;
+    border-radius: $radius-pill;
+    font-size: 0.8125rem;
+    font-weight: 500;
     line-height: 1.5;
-    color: $accent-dark;
-    background-color: rgba($accent-light, 0.3);
+    color: var(--global-tint-text-color);
+    background-color: var(--global-tint-color);
     white-space: nowrap;
   }
 
@@ -868,27 +950,27 @@ ul.teaching {
     flex-wrap: wrap;
     gap: 0.4rem;
 
+    // Same look as the publication buttons (MDB .btn-sm): outlined, uppercase, text-coloured.
     a {
       display: inline-block;
-      padding: 0.1rem 0.6rem;
-      border: 1px solid var(--global-divider-color);
-      border-radius: 3px;
-      font-size: 0.8rem;
-      color: var(--global-text-color-light);
+      padding: 0.25rem 1rem;
+      border: 1px solid var(--global-text-color);
+      border-radius: 0.125rem;
+      font-size: 0.64rem;
+      line-height: 1.5;
+      text-transform: uppercase;
+      color: var(--global-text-color);
       text-decoration: none;
 
       &:hover {
         color: var(--global-theme-color);
         border-color: var(--global-theme-color);
+        text-decoration: none;
       }
     }
   }
 }
 
-html[data-theme="dark"] ul.teaching .course-role {
-  color: $accent-light;
-  background-color: rgba($accent-light, 0.15);
-}
 
 // Talks
 
@@ -913,9 +995,10 @@ ul.talks {
     position: relative;
     flex: 0 0 220px;
     max-width: 100%;
-    border-radius: 4px;
+    border-radius: $radius-md;
     overflow: hidden;
     line-height: 0;
+    box-shadow: $shadow-soft;
 
     img {
       width: 100%;
@@ -1051,18 +1134,14 @@ ul.repositories {
   .repo-topic {
     display: inline-block;
     padding: 0.15rem 0.7rem;
-    border-radius: 2rem;
-    font-size: 0.8rem;
+    border-radius: $radius-pill;
+    font-size: 0.8125rem;
+    font-weight: 500;
     line-height: 1.5;
-    color: $accent-dark;
-    background-color: rgba($accent-light, 0.3);
+    color: var(--global-tint-text-color);
+    background-color: var(--global-tint-color);
     white-space: nowrap;
   }
-}
-
-html[data-theme="dark"] ul.repositories .repo-topic {
-  color: $accent-light;
-  background-color: rgba($accent-light, 0.15);
 }
 
 // Blog
@@ -1239,6 +1318,9 @@ html[data-theme="dark"] ul.repositories .repo-topic {
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
     text-align: right;
   }
 
@@ -1248,9 +1330,11 @@ html[data-theme="dark"] ul.repositories .repo-topic {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.75rem;
 
       .preview {
+        border-radius: $radius-sm;
+        box-shadow: $shadow-soft !important;
       }
 
       .abbr {
@@ -1258,12 +1342,22 @@ html[data-theme="dark"] ul.repositories .repo-topic {
 
         abbr {
           display: inline-block;
-          background-color: var(--global-theme-color);
+          background-color: var(--global-tint-color);
           margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
+          padding: 0.3rem 0.4rem;
+          border-radius: $radius-sm;
+          color: var(--global-tint-text-color) !important;
+          font-size: 0.75rem;
+          font-weight: 600;
+          line-height: 1.25;
+          text-align: center;
+          white-space: normal;
+          overflow-wrap: anywhere;
+          text-decoration: none;
+          border-bottom: 0;
 
           a {
-            color: white;
+            color: var(--global-tint-text-color);
 
             &:hover {
               text-decoration: none;
@@ -1278,7 +1372,15 @@ html[data-theme="dark"] ul.repositories .repo-topic {
       }
 
       .title {
-        font-weight: bolder;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.35;
+        margin-bottom: 0.2rem;
+      }
+
+      .periodical {
+        color: var(--global-text-color-light);
+        font-size: 0.9375rem;
       }
 
       .author {
@@ -1322,6 +1424,11 @@ html[data-theme="dark"] ul.repositories .repo-topic {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
           }
+
+          &[aria-expanded="true"] {
+            color: var(--global-theme-color);
+            border-color: var(--global-theme-color);
+          }
         }
         a.award.btn {
           border-color: var(--global-highlight-color);
@@ -1344,10 +1451,10 @@ html[data-theme="dark"] ul.repositories .repo-topic {
       }
 
       .hidden {
-        font-size: 0.875rem;
+        font-size: 0.9375rem;
         max-height: 0px;
         overflow: hidden;
-        text-align: justify;
+        text-align: left;
         transition-property: 0.15s ease;
         -moz-transition: 0.15s ease;
         -ms-transition: 0.15s ease;
@@ -1368,6 +1475,7 @@ html[data-theme="dark"] ul.repositories .repo-topic {
 
       .hidden.open {
         max-height: 100em;
+        margin-top: 0.75rem;
         transition-property: 0.15s ease;
         -moz-transition: 0.15s ease;
         -ms-transition: 0.15s ease;
@@ -1375,12 +1483,16 @@ html[data-theme="dark"] ul.repositories .repo-topic {
         transition: all 0.15s ease;
       }
 
-      div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
+      div.abstract.hidden,
+      div.bibtex.hidden {
+        border: 1px solid transparent;
+        border-radius: $radius-sm;
       }
 
-      div.abstract.hidden.open {
-        border-color: var(--global-text-color);
+      div.abstract.hidden.open,
+      div.bibtex.hidden.open {
+        border-color: var(--global-divider-color);
+        background-color: var(--global-card-bg-color);
       }
 
       // Title links to the publication's own page
@@ -1395,9 +1507,9 @@ html[data-theme="dark"] ul.repositories .repo-topic {
 
       // Abstract and bibtex on the per-publication page: always visible
       .expanded {
-        font-size: 0.875rem;
-        text-align: justify;
-        margin-top: 1rem;
+        font-size: 1rem;
+        text-align: left;
+        margin-top: 1.5rem;
 
         h2 {
           font-size: 1rem;
@@ -1435,10 +1547,12 @@ figure.highlight {
 }
 
 pre {
-  color: var(--global-theme-color);
+  color: var(--global-text-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 6px;
-  padding: 6px 12px;
+  border-radius: $radius-sm;
+  padding: 8px 12px;
+  font-family: $font-mono;
+  font-size: 0.875rem;
 
   pre,
   code {
@@ -1450,10 +1564,12 @@ pre {
 }
 
 code {
-  color: var(--global-theme-color);
+  color: var(--global-text-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 3px;
-  padding: 3px 3px;
+  border-radius: 4px;
+  padding: 2px 5px;
+  font-family: $font-mono;
+  font-size: 0.875em;
 }
 
 // Transitioning Themes
@@ -1461,7 +1577,10 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: all 750ms !important;
+  transition:
+    background-color 250ms ease,
+    color 250ms ease,
+    border-color 250ms ease !important;
   transition-delay: 0 !important;
 }
 
@@ -1760,16 +1879,27 @@ ninja-keys::part(ninja-input-wrapper) {
 .bibsearch-form-input {
   color: var(--global-newsletter-text-color);
   background: var(--global-newsletter-bg-color);
-  border: 1px solid var(--global-newsletter-text-color);
+  border: 1px solid var(--global-divider-color);
   outline: none;
   margin: 0px 10px 0px 0px;
   width: 100%;
   max-width: 350px;
   min-width: 100px;
+  min-height: 36px;
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px;
-  border-radius: 6px;
+  border-radius: $radius-sm;
   padding: 8px 12px;
+  font-size: 0.9375rem;
+  transition: border-color 0.15s ease;
+
+  &::placeholder {
+    color: var(--global-text-color-light);
+  }
+
+  &:focus {
+    border-color: var(--global-theme-color);
+  }
 }
 
 .newsletter-form-input:focus {
@@ -1939,4 +2069,103 @@ ninja-keys::part(ninja-input-wrapper) {
       }
     }
   }
+}
+
+// Section headings on the home page link to their full pages without looking like links.
+h2.section-heading a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
+
+  &::after {
+    content: " \2192";
+    display: inline-block;
+    margin-left: 0.15em;
+    font-size: 0.75em;
+    color: var(--global-text-color-light);
+    transition: transform 0.15s ease;
+  }
+
+  &:hover::after {
+    color: var(--global-theme-color);
+    transform: translateX(2px);
+  }
+}
+
+// News: a dated list. Dates sit in the system face with tabular figures.
+.news {
+  .table-responsive {
+    overflow-y: auto;
+  }
+
+  table.table {
+    margin-bottom: 0;
+
+    tr {
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    th.news-date {
+      width: 8.5rem;
+      padding: 0.6rem 1rem 0.6rem 0;
+      color: var(--global-text-color-light);
+      font-size: 0.875rem;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    td {
+      padding: 0.6rem 0;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+  }
+
+  .news-title {
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .news table.table th.news-date {
+    width: 6.5rem;
+    font-size: 0.8125rem;
+  }
+}
+
+// Theme toggle sits in a comfortable hit region, glyph centred.
+.navbar .toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+#light-toggle i {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+// Back to top: round, soft, in the UI face.
+#back-to-top {
+  border-radius: 50%;
+  box-shadow: $shadow-soft;
+}
+
+// Landing page name: regular weight with the first name in bold, as in the top bar.
+.post-header .post-title .font-weight-bold {
+  font-weight: 700 !important;
 }

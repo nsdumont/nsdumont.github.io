@@ -17,6 +17,24 @@ $(document).ready(function () {
   });
   $("a").removeClass("waves-effect waves-light");
 
+  // keep the expanded state readable by assistive technology and the keyboard
+  $("a.abstract, a.award, a.bibtex").each(function () {
+    const $btn = $(this);
+    $btn.on("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        $btn.trigger("click");
+      }
+    });
+    $btn.on("click", function () {
+      const $entry = $btn.parent().parent();
+      $entry.find("a.abstract, a.award, a.bibtex").each(function () {
+        const cls = $(this).hasClass("abstract") ? ".abstract" : $(this).hasClass("award") ? ".award" : ".bibtex";
+        $(this).attr("aria-expanded", $entry.find(cls + ".hidden").hasClass("open") ? "true" : "false");
+      });
+    });
+  });
+
   // bootstrap-toc
   if ($("#toc-sidebar").length) {
     // remove related publications years from the TOC

@@ -80,6 +80,8 @@ side_art:
     opacity: 0.75 # overall darkness of the ink (0-1)
     animate: true # occasionally let a single neuron darken briefly, then fade back
     pulse_interval: 6 # seconds between idle pulses
+    scroll_amplitude: 0.35 # how far each neuron's opacity swings as you scroll (0 = off)
+    scroll_period: 600 # pixels of scrolling per full swing
 
 # TODO: add layout settings (single page vs. multi-page)
 

@@ -6,7 +6,9 @@
 @use "sass:color";
 
 // Colors
-// Site accent palette (forest greens): dark, medium, light
+// Site accent palette (forest greens): dark, medium, light.
+// Contrast on the light surface (#fafafa): $accent 4.95:1, $accent-dark 10.4:1.
+// Contrast on the dark surface (#1c1c1d): $accent-light 9.0:1.
 $accent-dark: #164a41 !default;
 $accent: #4d774e !default;
 $accent-light: #9dc88d !default;
@@ -29,18 +31,45 @@ $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
 
+// Neutral scale. Text uses a softened near-black rather than pure black, and
+// secondary text sits at or above 4.5:1 on its surface in both appearances.
 $grey-color: #828282 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);
 $grey-color-dark: #1c1c1d;
 $grey-900: #212529;
+
+$text-color-light-surface: #1d1d1f !default; // 15.5:1 on #fafafa
+$text-secondary-light-surface: #6e6e73 !default; // 4.9:1 on #fafafa
+$text-color-dark-surface: #f5f5f7 !default; // 16.2:1 on #1c1c1d
+$text-secondary-dark-surface: #a1a1a6 !default; // 6.6:1 on #1c1c1d
+$divider-light-surface: rgba(0, 0, 0, 0.1) !default;
+$divider-dark-surface: #3a3a3c !default;
+$surface-elevated-dark: #242426 !default;
 
 $white-color: #fafafa !default;
 $black-color: #000000 !default;
 
 // Theme colors
 
-$code-bg-color-light: rgba($purple-color, 0.05);
+$code-bg-color-light: rgba($accent, 0.08);
 $code-bg-color-dark: #2c3237 !default;
+
+// Type
+// Fraunces (self-hosted, see _layout.scss) carries the name, headings and prose.
+// Navigation, buttons, badges and metadata use the platform's own UI face so
+// controls feel native on every device while the content keeps its character.
+$font-serif: "Fraunces", Georgia, "Times New Roman", serif !default;
+$font-ui:
+  -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !default;
+
+// Shape and elevation: one radius family, one soft shadow.
+$radius-sm: 6px !default;
+$radius-md: 10px !default;
+$radius-pill: 999px !default;
+$shadow-soft:
+  0 1px 2px rgba(0, 0, 0, 0.06),
+  0 2px 8px rgba(0, 0, 0, 0.06) !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";

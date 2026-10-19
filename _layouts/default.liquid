@@ -24,11 +24,13 @@
       {% include side_cortex.liquid %}
     {% endif %}
 
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <!-- Header -->
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
+    <div class="container mt-5" role="main" id="main">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
